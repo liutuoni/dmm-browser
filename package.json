@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "puppeteer": "^5.5.0",
+    "glob": "^7.1.6"
+  },
+  "devDependencies": {},
+  "name": "dmm-browser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

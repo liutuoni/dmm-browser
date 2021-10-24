@@ -1,0 +1,2569 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<title>DMM Player</title>
+<meta name="robots" content="noindex,nofollow" >
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" ><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true}};(window.NREUM||(NREUM={})).loader_config={xpid:"Vg8HVldQCBAJVFhaBQgBX1A=",licenseKey:"NRBR-2f7be5ca0c79f4f0fb9",applicationID:"909829694"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(25),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(26),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");if(!y.disabled){y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(26),a=t(25);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||c(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(22),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime]))}}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(18),m=t(17),w=t(14),v=NREUM.o.REQ,g=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof g&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;"string"==typeof o?n=o:"object"==typeof o&&o instanceof v?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n);var s=(""+(o&&o instanceof v&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime])})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(17);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(25),s=t(26),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],17:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],18:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],19:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(27);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],20:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function s(t){"hidden"===t&&d("pageHide",[l.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d=t("handle"),l=t("loader"),p=t(24),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(s)}},{}],22:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],23:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],24:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],25:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],26:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],27:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(25),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(19),s=t("handle"),c=t(25),f=t("ee"),u=t(23),d=t(20),l=t(16),p=l.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,w="addEventListener",v="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!d(h.location);NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},R=g&&y&&y[w]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(15),t(21),m[w]?(m[w]("DOMContentLoaded",o,!1),h[w]("load",r,!1)):(m[v]("onreadystatechange",i),h[v]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(26),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+<meta http-equiv="content-style-type" content="text/css" >
+<meta http-equiv="content-script-type" content="text/javascript" >
+<link href="https://digstatic.dmm.com/css/popup.css?1421146925" media="screen" rel="stylesheet" type="text/css" >
+<link href="https://p.dmm.co.jp/p/apple-touch-icon.png" rel="apple-touch-icon" >
+<link href="https://p.dmm.co.jp/p/apple-touch-icon.png" rel="apple-touch-icon-precomposed" >
+<script type="text/javascript" src="https://digstatic.dmm.com/js/bugfix.js?1421734015"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/library/jquery_1_8_3/jquery-1.8.3.min.js?1358679782"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/digital/jquery.ds-localnav.js"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/suggest.js?1549348780"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/suggest_ajax.js?1458112746"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/jquery.cookie.js?1306488106"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/common/set_tracking.js?1463477665"></script>
+<script type="text/javascript">
+    //<!--
+    function sendGaEventCode(action) {
+    var label;
+
+    label = '';
+
+        if (label == '') {
+        label = 'top';
+    }
+
+    _gaq.push(['_trackEvent', 'mtab_general_digital', action, label]);
+    ga('mutual.send', 'event', 'mtab_general_digital', action, label);
+}
+    //-->
+</script>
+
+<script src="https://digstatic.dmm.com/js/s_code_dummy.js"></script>
+<script src="https://digstatic.dmm.com/js/mbox.js"></script><script>
+  var _gaq = _gaq || [];
+  _gaq.push(
+    ['_setAccount', 'UA-31336-2'],
+    ['_setDomainName', '.dmm.co.jp'],
+    ['_setCustomVar', 1, 'UserStatus', 'LoggedIn', 2],
+    ['_setSampleRate', '10'],
+    ['_setCampaignCookieTimeout', 2592000000],
+    ['_trackPageview']
+  );
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script>
+    (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-KMXGH9D':true});
+    </script><script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-48257133-2', 'auto');
+    ga('require', 'GTM-KMXGH9D');
+    </script>
+
+</head>
+
+<body>
+
+
+
+        <link rel="stylesheet" href="https://digstatic.dmm.com/css/digital/player.css?1628669531">
+                <link rel="stylesheet" href="https://digstatic.dmm.com/css/digital/scrollbar.css?1628669531">
+                <link rel="stylesheet" href="https://digstatic.dmm.com/css/digital/slider.css?1628669531">
+        <script type="text/javascript" src="https://digstatic.dmm.com/js/digital/jquery.ds-playeroutside.js"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/digital/jquery-ui.js"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/digital/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/digital/focus-visible.min.js"></script>
+<script type="text/javascript" src="https://digstatic.dmm.com/js/digital/dmmvideo.min.js?v1.15.0"></script>
+<div id="container" class="rst" tabindex="0" style="outline: none;">
+    <div id="player" class="lengthwise">
+        <div id="video"></div>
+    </div>
+    <div id="header" class="panel">
+        <div class="area-inner group">
+            <p class="title"></p>
+            <button id="part-list-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                    <title>パート選択</title>
+                    <path d="M21 10H3C2.45 10 2 10.45 2 11V21C2 21.55 2.45 22 3 22H21C21.55 22 22 21.55 22 21V11C22 10.45 21.55 10 21 10ZM14.75 16.435L10.75 18.745C10.415 18.935 10 18.695 10 18.31V13.69C10 13.305 10.415 13.065 10.75 13.255L14.75 15.565C15.085 15.76 15.085 16.24 14.75 16.435Z" fill="white" fill-opacity="0.6"/>
+                    <path d="M19 8H5C4.45 8 4 7.55 4 7C4 6.45 4.45 6 5 6H19C19.55 6 20 6.45 20 7C20 7.55 19.55 8 19 8Z" fill="white" fill-opacity="0.6"/>
+                    <path d="M17 4H7C6.45 4 6 3.55 6 3C6 2.45 6.45 2 7 2H17C17.55 2 18 2.45 18 3C18 3.55 17.55 4 17 4Z" fill="white" fill-opacity="0.6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="part-list-menu popup-menu" role="menu" style="display: none;">
+        <div class="popup-menu-title">パート選択</div>
+    </div>
+
+    <div id="heatmap" class="panel">
+        <div id="heatmap_padding">
+            <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                <g><polygon id="heatmap_polygon" style="display: none;"></polygon></g>
+            </svg>
+        </div>
+        <span class="seekable"></span>
+    </div>
+
+    <div id="controller" class="panel">
+        <div class="area-inner group">
+            <div id="seek-padding" class="seekable">
+                <div id="seek" class="area-seek">
+                    <div id="thumbnail" class="area-thumbnail"></div>
+                </div>
+            </div>
+
+            <div class="area-time">
+                <span id="current_time">00:00:00</span> / <span id="duration">00:00:00</span>
+            </div>
+
+            <div class="area-playControls group">
+                <button id="move_previous_part" onclick="loadPreviousPart(PLAYERLOG_UI_ACTION_BY.BUTTON)" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36px" height="36px">
+                        <title>前のパートへ(Ctrl/⌘+←)</title>
+                        <g>
+                            <path d="M29.1003 6.22499L11.2503 16.725C10.2753 17.325 10.2753 18.75 11.2503 19.35L29.1003 29.775C30.1503 30.375 31.5003 29.625 31.5003 28.35V7.72499C31.5003 6.44999 30.1503 5.62499 29.1003 6.22499Z"/>
+                            <path d="M6 30C5.175 30 4.5 29.325 4.5 28.5V7.5C4.5 6.675 5.175 6 6 6C6.825 6 7.5 6.675 7.5 7.5V28.5C7.5 29.325 6.825 30 6 30Z"/>
+                        </g>
+                    </svg>
+                </button>
+                <button id="skip_backward_long" onclick="skip(-(VIDEO_TIME_SETTINGS.SKIP_LONG), 'rewind_60', PLAYERLOG_UI_ACTION_BY.BUTTON)" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36px" height="36px">
+                        <title>60秒戻る(shift＋←)</title>
+                        <g>
+                            <path d="M19.22,21.67c2,0,3.47,1.62,3.47,4A4.15,4.15,0,0,1,18.4,30c-2.72,0-4.29-1.82-4.29-4.75,0-2.5,1.12-5.69,3.89-7.15a2.23,2.23,0,0,1,1.15-.34A1.22,1.22,0,0,1,20.52,19c0,1.62-2.25,1.12-3.06,3.24A2.73,2.73,0,0,1,19.22,21.67Zm.67,4a1.49,1.49,0,1,0-3,0,1.49,1.49,0,1,0,3,0Z"/>
+                            <path d="M23.9,23.9c0-3.33,1.85-6.14,5-6.14s5,2.81,5,6.14S32.06,30,28.91,30,23.9,27.23,23.9,23.9Zm7.21,0c0-1.89-.83-3.44-2.2-3.44s-2.2,1.55-2.2,3.44.83,3.44,2.2,3.44S31.11,25.79,31.11,23.9Z"/>
+                            <path d="M35,7.27a18.82,18.82,0,0,0-6.89-2.86A20,20,0,0,0,10.53,9.19a1,1,0,0,1-1.39,0l-.43-.43A1,1,0,0,0,7,9.45v5.07a1,1,0,0,0,1,1h5.07a1,1,0,0,0,.71-1.71l-.39-.39a1,1,0,0,1,0-1.44A16,16,0,0,1,27.17,8.31a15.23,15.23,0,0,1,6,2.62,16.06,16.06,0,0,1,6.41,16.41A15.22,15.22,0,0,1,37,33.29,16,16,0,0,1,24,40a15.84,15.84,0,0,1-11.26-4.64,2.08,2.08,0,0,0-2.63-.27,2,2,0,0,0-.25,3,20,20,0,0,0,18.24,5.45A18.82,18.82,0,0,0,35,40.73,20,20,0,0,0,35,7.27Z"/>
+                        </g>
+                    </svg>
+                </button>
+                <button id="skip_backward_short" onclick="skip(-(VIDEO_TIME_SETTINGS.SKIP_SHORT), 'rewind_10', PLAYERLOG_UI_ACTION_BY.BUTTON)" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36px" height="36px">
+                        <title>10秒戻る(←)</title>
+                        <g>
+                            <path d="M35,7.27a18.82,18.82,0,0,0-6.89-2.86A20,20,0,0,0,10.53,9.19a1,1,0,0,1-1.39,0l-.43-.43A1,1,0,0,0,7,9.45v5.07a1,1,0,0,0,1,1h5.07a1,1,0,0,0,.71-1.71l-.39-.39a1,1,0,0,1,0-1.44A16,16,0,0,1,27.17,8.31a15.23,15.23,0,0,1,6,2.62,16.05,16.05,0,0,1,6.41,16.4,15.2,15.2,0,0,1-2.62,6A16,16,0,0,1,24,40a15.84,15.84,0,0,1-11.26-4.64,2.08,2.08,0,0,0-2.63-.27,2,2,0,0,0-.25,3,20,20,0,0,0,18.24,5.45A18.75,18.75,0,0,0,35,40.73,20,20,0,0,0,35,7.27Z"/>
+                            <path d="M22.71,23.9c0-3.33,1.85-6.14,5-6.14s5,2.81,5,6.14S30.87,30,27.71,30,22.71,27.23,22.71,23.9Zm7.2,0c0-1.89-.83-3.44-2.2-3.44s-2.2,1.55-2.2,3.44.83,3.44,2.2,3.44S29.91,25.79,29.91,23.9Z"/>
+                            <path d="M17.52,22.3a1.67,1.67,0,0,1-1.19.49A1.22,1.22,0,0,1,15,21.48a1.65,1.65,0,0,1,.81-1.39l2.58-1.95a1.7,1.7,0,0,1,1-.34,1.23,1.23,0,0,1,1.28,1.4v9.27a1.4,1.4,0,1,1-2.78,0V24.31c0-.83,0-1.62.09-2.5Z"/>
+                        </g>
+                    </svg>
+                </button>
+                <button id="playpause" onclick="togglePlayPause(PLAYERLOG_UI_ACTION_BY.BUTTON)" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36px" height="36px">
+                        <title>再生/一時停止(Space)</title>
+                        <g id="play">
+                            <path d="M13.23,39.65,37,25.72a2,2,0,0,0,0-3.46L13.23,8.32A2.16,2.16,0,0,0,10,10.23V37.75A2.16,2.16,0,0,0,13.23,39.65Z" />
+                        </g>
+                        <g id="pause" style="display: none;">
+                            <rect x="12" y="8" width="10" height="32" rx="2" />
+                            <rect x="26" y="8" width="10" height="32" rx="2" />
+                        </g>
+                    </svg>
+                </button>
+                <button id="skip_forward_short" onclick="skip(VIDEO_TIME_SETTINGS.SKIP_SHORT, 'forward_10', PLAYERLOG_UI_ACTION_BY.BUTTON)" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36px" height="36px">
+                        <title>10秒送る(→)</title>
+                        <g>
+                            <path d="M17.52,22.55a1.64,1.64,0,0,1-1.19.48A1.23,1.23,0,0,1,15,21.72a1.65,1.65,0,0,1,.81-1.39l2.58-1.94a1.65,1.65,0,0,1,1-.34,1.23,1.23,0,0,1,1.28,1.4v9.27a1.39,1.39,0,1,1-2.77,0V24.56c0-.82,0-1.62.09-2.5Z"/>
+                            <path d="M22.71,24.15c0-3.33,1.85-6.14,5-6.14s5,2.81,5,6.14-1.86,6.14-5,6.14S22.71,27.48,22.71,24.15Zm7.2,0c0-1.89-.83-3.44-2.2-3.44s-2.19,1.55-2.19,3.44.82,3.44,2.19,3.44S29.91,26,29.91,24.15Z"/>
+                            <path d="M39.26,8.74l-.43.43a1,1,0,0,1-1.39,0,20,20,0,1,0,.66,29,2.05,2.05,0,0,0,.25-2.63,2,2,0,0,0-3-.25A16,16,0,1,1,34.56,12a1,1,0,0,1,0,1.44l-.39.39a1,1,0,0,0,.71,1.7H40a1,1,0,0,0,1-1V9.44A1,1,0,0,0,39.26,8.74Z"/>
+                        </g>
+                    </svg>
+                </button>
+                <button id="skip_forward_long" onclick="skip(VIDEO_TIME_SETTINGS.SKIP_LONG, 'forward_60', PLAYERLOG_UI_ACTION_BY.BUTTON)" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36px" height="36px">
+                        <title>60秒送る(shift＋→)</title>
+                        <g>
+                            <path d="M19.22,21.67c2,0,3.47,1.62,3.47,4A4.15,4.15,0,0,1,18.4,30c-2.72,0-4.29-1.82-4.29-4.75,0-2.5,1.12-5.69,3.89-7.15a2.23,2.23,0,0,1,1.15-.34A1.22,1.22,0,0,1,20.52,19c0,1.62-2.25,1.12-3.06,3.24A2.73,2.73,0,0,1,19.22,21.67Zm.67,4a1.49,1.49,0,1,0-3,0,1.49,1.49,0,1,0,3,0Z"/>
+                            <path d="M23.9,23.9c0-3.33,1.85-6.14,5-6.14s5,2.81,5,6.14S32.06,30,28.91,30,23.9,27.23,23.9,23.9Zm7.21,0c0-1.89-.83-3.44-2.2-3.44s-2.2,1.55-2.2,3.44.83,3.44,2.2,3.44S31.11,25.79,31.11,23.9Z"/>
+                            <path d="M39.26,8.74l-.43.43a1,1,0,0,1-1.39,0A20,20,0,0,0,19.83,4.42a18.85,18.85,0,0,0-6.65,2.74A20.07,20.07,0,0,0,4.45,28.31a18.91,18.91,0,0,0,2.78,6.63,20,20,0,0,0,30.86,3.25,2.05,2.05,0,0,0,.26-2.63,2,2,0,0,0-3-.25,16.07,16.07,0,0,1-16.1,4,12.48,12.48,0,0,1-2.05-.81A16.08,16.08,0,0,1,8.43,20.22,14.44,14.44,0,0,1,10,16.31,16,16,0,0,1,34.56,12a1,1,0,0,1,0,1.44l-.39.39a1,1,0,0,0,.71,1.71H40a1,1,0,0,0,1-1V9.45A1,1,0,0,0,39.26,8.74Z"/>
+                        </g>
+                    </svg>
+                </button>
+                <button id="move_next_part" onclick="loadNextPart(PLAYERLOG_UI_ACTION_BY.BUTTON)" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36px" height="36px">
+                        <title>次のパートへ(Ctrl/⌘+→)</title>
+                        <g>
+                            <path d="M6.9 29.775L24.75 19.275C25.725 18.675 25.725 17.25 24.75 16.65L6.9 6.22502C5.85 5.62502 4.5 6.37502 4.5 7.65002V28.275C4.5 29.55 5.85 30.375 6.9 29.775Z"/>
+                            <path d="M30 30C29.175 30 28.5 29.325 28.5 28.5V7.5C28.5 6.675 29.175 6 30 6C30.825 6 31.5 6.675 31.5 7.5V28.5C31.5 29.325 30.825 30 30 30Z"/>
+                        </g>
+                    </svg>
+                </button>
+           </div>
+
+            <div class="area-rightGuide group">
+                <div id="volume_set" class="area-volumeSet">
+                    <button onclick="volume.toggleMute(PLAYERLOG_UI_ACTION_BY.BUTTON)" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px">
+                            <title>ミュート</title>
+                            <g id="volume_on">
+                                <path d="M7.67,18H5a1,1,0,0,0-1,1V29a1,1,0,0,0,1,1H7.67a1,1,0,0,1,.6.2L20.4,39.3a1,1,0,0,0,1.6-.8v-29a1,1,0,0,0-1.6-.8L8.27,17.8A1,1,0,0,1,7.67,18Z"/>
+                                <path d="M26,32a2,2,0,0,1,2-2c2.76,0,4-3.24,4-6s-1.24-6-4-6a2,2,0,0,1,0-4c5,0,8,5,8,10s-3,10-8,10A2,2,0,0,1,26,32Z"/>
+                                <path d="M27.8,42a2,2,0,0,1,0-4c7,0,12.2-6.28,12.2-14S34.75,10,27.8,10A1.91,1.91,0,0,1,26,8a1.91,1.91,0,0,1,1.8-2C36.74,6,44,14.07,44,24S36.74,42,27.8,42Z"/>
+                            </g>
+                            <g id="volume_off">
+                                <path d="M33.09,28.91a1,1,0,0,0,1.54-.16A8.9,8.9,0,0,0,36,24c0-4.92-3-9.94-7.87-10A2.09,2.09,0,0,0,26,15.74,2,2,0,0,0,27.91,18c2.13.08,3.41,2.14,3.89,4.22a8.41,8.41,0,0,1-.23,4.37,1.07,1.07,0,0,0,.23,1Z"/>
+                                <path d="M27.91,10C35.67,10,40,16.27,40,24a14,14,0,0,1-2.55,8,1,1,0,0,0,.09,1.3L39,34.78a1,1,0,0,0,1.52-.12A17.91,17.91,0,0,0,44,24c0-9.92-6.12-18-16-18a2,2,0,0,0-1.71,3.1A1.87,1.87,0,0,0,27.91,10Z"/>
+                                <path d="M20.4,8.69,17.59,10.8a1,1,0,0,0-.11,1.5l2.81,2.81A1,1,0,0,0,22,14.4V9.49A1,1,0,0,0,20.4,8.69Z"/>
+                                <path d="M8.27,8.72a2,2,0,0,0-3,.25,2,2,0,0,0,.29,2.57l3.91,3.9A1,1,0,0,1,9.4,17l-1.14.86a1,1,0,0,1-.6.2H5a1,1,0,0,0-1,1V29a1,1,0,0,0,1,1H7.64a1,1,0,0,1,.62.21L20.4,39.79A1,1,0,0,0,22,39V30.34a1,1,0,0,1,1.71-.7l6.43,6.43a1,1,0,0,1-.54,1.69A13.55,13.55,0,0,1,27,38a2,2,0,0,0-2,1.64A2,2,0,0,0,27,42a17.68,17.68,0,0,0,6.83-1.37,1,1,0,0,1,1.09.21l1.64,1.63a1.94,1.94,0,0,0,1.37.57,2,2,0,0,0,1.48-.68,2,2,0,0,0-.19-2.71Z"/>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="box-volumeSet">
+                        <div id="volume"></div>
+                    </div>
+                </div>
+
+                <button id="settings-menu-icon" class="area-settingsMenu" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px">
+                        <title>設定</title>
+                        <g>
+                            <path d="M44 26V22C44 20.9 43.1 20 42 20H40.2C39.8 20 39.4 19.7 39.2 19.3C38.9 18.3 38.5 17.4 38.1 16.6C37.9 16.2 37.9 15.7 38.3 15.4L39.6 14.1C40.4 13.3 40.4 12.1 39.6 11.3L36.8 8.5C36 7.7 34.8 7.7 34 8.5L32.7 9.8C32.4 10.1 31.9 10.2 31.5 10C30.6 9.5 29.7 9.2 28.8 8.9C28.4 8.8 28.1 8.4 28.1 7.9V6C28.1 4.9 27.2 4 26.1 4H22.1C21 4 20.1 4.9 20.1 6V7.8C20.1 8.2 19.8 8.6 19.4 8.8C18.4 9.1 17.5 9.5 16.7 9.9C16.3 10.1 15.8 10.1 15.5 9.7L14.2 8.4C13.4 7.6 12.2 7.6 11.4 8.4L8.6 11.2C7.8 12 7.8 13.2 8.6 14L9.9 15.3C10.2 15.6 10.3 16.1 10.1 16.5C9.6 17.4 9.3 18.3 9 19.2C8.9 19.6 8.5 19.9 8 19.9H6C4.9 19.9 4 20.8 4 21.9V25.9C4 27 4.9 27.9 6 27.9H7.8C8.2 27.9 8.6 28.2 8.8 28.6C9.1 29.6 9.5 30.5 9.9 31.3C10.1 31.7 10.1 32.2 9.7 32.5L8.4 33.8C7.6 34.6 7.6 35.8 8.4 36.6L11.2 39.4C12 40.2 13.2 40.2 14 39.4L15.3 38.1C15.6 37.8 16.1 37.7 16.5 37.9C17.4 38.4 18.3 38.7 19.2 39C19.6 39.1 19.9 39.5 19.9 40V42C19.9 43.1 20.8 44 21.9 44H25.9C27 44 27.9 43.1 27.9 42V40.2C27.9 39.8 28.2 39.4 28.6 39.2C29.6 38.9 30.5 38.5 31.3 38.1C31.7 37.9 32.2 37.9 32.5 38.3L33.8 39.6C34.6 40.4 35.8 40.4 36.6 39.6L39.4 36.8C40.2 36 40.2 34.8 39.4 34L38.1 32.7C37.8 32.4 37.7 31.9 37.9 31.5C38.4 30.6 38.7 29.7 39 28.8C39.1 28.4 39.5 28.1 40 28.1H42C43.1 28 44 27.1 44 26ZM24 32C19.6 32 16 28.4 16 24C16 19.6 19.6 16 24 16C28.4 16 32 19.6 32 24C32 28.4 28.4 32 24 32Z"/>
+                        </g>
+                    </svg>
+                </button>
+
+                <button id="fullscreen_set" class="area-screen" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px">
+                        <title>全画面モード切り替え(Alt+Enter)</title>
+                        <g id="fullscreen_on">
+                            <path d="M34,10h0a2,2,0,0,1,2-2h6.08A1.94,1.94,0,0,1,44,9.94V16a2,2,0,0,1-2,2h0a2,2,0,0,1-2-2V13a1,1,0,0,0-1-1H36A2,2,0,0,1,34,10Z"/>
+                            <path d="M6,18H6a2,2,0,0,1-2-2V9.93A1.94,1.94,0,0,1,6,8H12a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2H9a1,1,0,0,0-1,1V16A2,2,0,0,1,6,18Z"/>
+                            <path d="M14,38h0a2,2,0,0,1-2,2H5.94A1.94,1.94,0,0,1,4,38V32a2,2,0,0,1,2-2H6a2,2,0,0,1,2,2C8,33,8,34.2,8,35a1,1,0,0,0,1,1H12A2,2,0,0,1,14,38Z"/>
+                            <path d="M42,30h0a2,2,0,0,1,2,2v6.08A1.94,1.94,0,0,1,42.05,40H36a2,2,0,0,1-2-2h0a2,2,0,0,1,2-2h3a1,1,0,0,0,1-1V32A2,2,0,0,1,42,30Z"/>
+                            <rect x="12" y="16" width="24" height="15.94" rx="2"/>
+                        </g>
+                        <g id="fullscreen_off" style="display: none;">
+                            <path d="M43.91,15.92V16a2,2,0,0,1-2,2h-6a2,2,0,0,1-2-2V10a2,2,0,0,1,2-2H36a2,2,0,0,1,2,2v3.16a.82.82,0,0,0,.82.82h3.16A2,2,0,0,1,43.91,15.92Z"/>
+                            <path d="M11.94,8H12a2,2,0,0,1,2,2v6a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2v-.08a2,2,0,0,1,2-2H9.14a.82.82,0,0,0,.82-.82V10A2,2,0,0,1,11.94,8Z"/>
+                            <path d="M36,40h-.08a2,2,0,0,1-2-2V32a2,2,0,0,1,2-2h6a2,2,0,0,1,2,2v.08a2,2,0,0,1-2,2H38.76a.82.82,0,0,0-.81.82V38A2,2,0,0,1,36,40Z"/>
+                            <path d="M4,32.08V32a2,2,0,0,1,2-2h6a2,2,0,0,1,2,2v6a2,2,0,0,1-2,2h-.09a2,2,0,0,1-2-2V34.88a.82.82,0,0,0-.82-.82H6A2,2,0,0,1,4,32.08Z"/>
+                            <rect x="15.9" y="17.98" width="16" height="12" rx="2"/>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="settings-menu popup-menu" role="menu" style="display: none;">
+                <div class="popup-menu-title">設定</div>
+
+                <div id="heatmap-toggle-menu" role="menuitemcheckbox" aria-checked="true" tabindex="0">
+                    <div class="menuitem-label">視聴率グラフ</div>
+                    <div class="menuitem-content">
+                        <div class="menuitem-toggle"></div>
+                    </div>
+                </div>
+
+                <div id="playback-rate-menu" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-owns="playback-rate-menu-expanded" tabindex="0">
+                    <div class="menuitem-label">再生速度</div>
+                    <div class="menuitem-content"></div>
+                </div>
+                <div id="playback-rate-menu-expanded" class="expanded-menu" role="menuitem" tabindex="-1" style="display: none;">
+                    <button class="panel-title">再生速度</button>
+                </div>
+
+                <div id="quality-menu" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-owns="quality-menu-expanded" tabindex="0">
+                    <div class="menuitem-label">画質</div>
+                    <div class="menuitem-content"></div>
+                </div>
+                <div id="quality-menu-expanded" class="expanded-menu" role="menuitem" tabindex="-1" style="display: none;">
+                    <button class="panel-title">画質</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay">
+        <div id="video_error" class="error" style="display: none">
+            <p>エラー：<span class="error_code"></span></p>
+            <p class="error_message"></p>
+            <p><a href="#" class="btn-player-close">プレイヤーを閉じる</a></p>
+        </div>
+        <div id="video_loading" class="loading">
+            <img src="https://p.dmm.co.jp/p/ds/player/dmmplayer/ico_loading.png" width="60" height="60" alt="ローディング中">
+        </div>
+        <div id="video_blocked" class="blocked" style="display: none">
+            <h5>同時視聴エラー</h5>
+            <p>別の端末で視聴が開始されました。</p>
+            <p>同一アカウントでの同時視聴はできません。</p>
+            <p>視聴を再開すると、この端末以外での視聴が停止されます。</p>
+            <div class="buttons">
+                <button class="close">閉じる</button>
+                <button class="resume">再開する</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+var IS_DEBUG = false;
+// キーコード
+var KEY_CODE = {
+    F11   : 122,
+    LEFT  : 37,
+    UP    : 38,
+    RIGHT : 39,
+    DOWN  : 40,
+    ENTER : 13,
+    SPACE : 32,
+    ESC   : 27,
+    M     : 77,
+};
+var API_FORMAT    = "json"; // APIフォーマット
+var API_MAIL_FLAG = "yes";  // APIメール送信フラグ
+// APIパス
+var API_PATH   = "/service/digitalapi/-/html5/";
+var API_DOMAIN = {
+    0 : "//www.dmm.com",
+    1 : "//www.dmm.co.jp"
+}
+// APIアクション識別子
+var API_ACTION = {
+    PLAY_INFO    : "playinfo",
+    PLAY_LIST    : "playlist",
+    PLAY_COUNT   : "playcount",
+    GUIDE_SAMPLE : "sample"
+};
+// コアインスタンスタイプ
+var DMMVIDEO_INSTANCE_TYPE = {
+    HLS : "hls",
+    DASH: "dash"
+}
+// 時間設定(ms)
+var TIME_SETTINGS = {
+    CLOSE_PANEL  : 1500,
+    UNRESPONSIVE : 1000,
+    API_TIMEOUT  : 10000,
+    SETTING_MENU_FADE: 100
+}
+// 動画時間設定(sec)
+var VIDEO_TIME_SETTINGS = {
+    SKIP_SHORT: 10,
+    SKIP_LONG: 60
+}
+// エラー
+var ERROR = {
+    UNEXPECTED: {
+        CODE: "UNEXPECTED",
+        MESSAGE: "予期しないエラーが発生しました。"
+    },
+    NETWORK_ERROR: {
+        CODE: "GENERAL100",
+        MESSAGE: "通信エラーが発生しました。"
+    },
+    PARSE_ERROR: {
+        CODE: "GENERAL101",
+        MESSAGE: "通信エラーが発生しました。"
+    }
+}
+// クッキー
+var COOKIE_NAME = {
+    VOLUME  : "digital[play_volume]",
+    MUTED   : "digital[play_muted]",
+    HEATMAP : "digital[play_heatmap]"
+};
+// 再生速度
+var PLAYBACK_RATES = [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2];
+var DEFAULT_PLAYBACK_RATE = 1;
+var DEFAULT_PLAYBACK_RATE_NAME = "標準";
+// UIログ
+var PLAYERLOG_UI_ACTION_BY = {
+    BUTTON: "button",
+    KEYBOARD: "keyboard"
+}
+
+var HEATMAP_API_TOKEN = "op34fmfpae23";
+
+var dmmplayer;
+var keySystems;
+
+var delay;                  // 遅延実行
+var volume;                 // 音量
+var seekbar;                // シークバー
+
+var playableQualities;      // PlayInfo APIで取得した画質ごとの情報
+var currentQuality;
+var isBitrateBased;         // ビットレート形式の画質を使用しているか
+
+var playableParts;          // PlayList APIで取得したパートごとの情報(NOTE: パート分けなしの場合part=0になる)
+var currentPart;            // パート番号(1-indexed)
+
+var args;                   // 起動引数
+var cid;
+
+var instanceType;           // コアインスタンスタイプ
+var isActive = false;       // 初期化フラグ
+var isUnresponsive = false; // マウス動作に反応しない
+
+
+// Edge死活監視用
+var sameTimeCnt = 0;        // 同じcurrentTimeでrefreshStatusがCallされた回数
+var lastCurrentTime = 0;    // 直前currentTime
+
+// 自動再生設定
+var autoPlay = true;
+
+// リプレイ設定
+var replay   = false;
+
+// キーボード制限フラグ(プレイヤー埋め込み時にはフォーカスが当たっている場合のみキーボードを制御するため)
+// このフラグを有効にするにはcontainerにtabindexを設定
+var isLimitKeybord = true;
+
+// マウスがプレイヤー要素から離れた場合に即時でパネル非表示設定
+var isMouseLeaveClosePanel = false;
+
+// プレイヤーリサイズを行うかどうか
+var isPlayerResize = true;
+
+// フォーカスを取得するかどうか
+var isFocus = true;
+
+// 再生回数更新対象フラグ
+var isPlayCountService = false;
+
+// 再生回数更新実行フラグ
+var isPlayCounted = false;
+
+// マウス位置
+var mouseClientX = 0;
+var mouseClientY = 0;
+
+// シーク判定フラグ
+var isSeek = false;
+
+// ヒートマップ初期化フラグ
+var isHeatmapInitialized = false;
+// ヒートマップのパート数(パート切替判定に使用)
+var heatmapPart = 0;
+// ヒートマップAPIホスト(env取得時に切り替え)
+var heatmapApiEndpoint = "https://api.dmm.ai/v1/co.jp/video/heat_map/item";
+
+// pigeonホスト(env取得時に切り替え)	
+var pigeonHost = "https://pigeon.i3.dmm.com";
+
+// サムネイル定義
+// APIで取得に失敗するとnullが入る
+var thumbnailInfo = {
+    "expand"    : 1.25, // サムネイルの拡大倍率（フルスクリーン時）
+    "size"      : "m",  // サムネイルのサイズ
+    "margin"    : 0     // サムネイルの表示箇所の設定
+};
+var imgCnt = 0;
+
+// クッキーを設定するためのドメイン設定
+var cookieDomain     = location.hostname;
+var cookieDomainPreg = cookieDomain.match(/.dmm.co.jp|.dmm.com/);
+
+// env
+var env = 'production';
+
+// 初期化（起動時のみ実行）
+function main()
+{
+    IS_DEBUG = "";
+    init();
+
+    // 起動引数
+    args = {
+        format  : API_FORMAT,
+        mail    : API_MAIL_FLAG,
+        service : "digital",
+        browser : "chrome",
+        act : "playlist",
+        shop\u005fname : "digital",
+        product\u005fid : "snis00121",
+        exploit\u005fid : "HAWETXUUHYo0IonjY\u002bLIZw\u003d\u003d",
+        adult\u005fflag : "1",
+        sort : "",
+        media : "",
+        select : "",
+        slTest : "",
+        view\u005fflag : "1",
+        group\u005fid : "",
+        parent\u005fproduct\u005fid : "snis00121dl6",
+        HTTP\u005fHOST : "www.dmm.co.jp",
+        REQUEST\u005fURI : "\u002fdigital\u002f-\u002fplayer\u002f\u003d\u002fplayer\u003dhtml5\u002fact\u003dplaylist\u002fpid\u003dsnis00121\u002fview\u005fflag\u003d1\u002fparent\u005fproduct\u005fid\u003dsnis00121dl6\u002fpart\u003d1\u002f",
+        ctype : "",
+        part : "1",
+    };
+
+    // 遅延実行
+    delay = {
+        queues : [],
+        // 遅延実行の設定
+        set : function(id, func, time, arg) {
+            if (delay.queues[id] instanceof Array) {
+                delay.clear(id);
+            } else {
+                delay.queues[id] = [];
+            }
+            delay.queues[id].push(window.setTimeout(func, time, arg));
+        },
+        // 遅延実行の解除
+        clear : function(id) {
+            if (delay.queues[id] instanceof Array) {
+                $.each(delay.queues[id], function(index, id) {
+                    clearTimeout(id);
+                });
+            }
+        }
+    };
+
+    volume = {
+        create : function() {
+            $("#volume *").empty();
+            $("#volume").slider({
+                orientation: "vertical",
+                range : "min",
+                min   : 0,
+                max   : 100,
+                value : parseInt(dmmplayer.volume, 10),
+                slide : function (event, ui) {
+                    // mute設定解除
+                    setMuted(false);
+                    dmmplayer.volume = ui.value / 100;
+                }
+            });
+        },
+        initial: function() {
+            $("#volume_set").stop(true, true).hover(
+                function() {
+                    volume.open();
+                },
+                function() {
+                    volume.close();
+                }
+            );
+            volume.reload();
+        },
+        reload: function() {
+            var playVolume = getCookie(COOKIE_NAME.VOLUME);
+            playVolume = isFinite(playVolume) ? Math.min(Math.max(0, +playVolume), 1) : 0.5;
+
+            debug("play_volume : GET",  playVolume);
+            dmmplayer.volume = playVolume;
+
+            var playMuted = getCookie(COOKIE_NAME.MUTED);
+            if (playMuted == 1) {
+                setMuted(true);
+            }
+        },
+        refresh: function() {
+            $("#volume").slider("value", dmmplayer.muted ? 0 : dmmplayer.volume * 100);
+            if (dmmplayer.muted || dmmplayer.volume === 0) {
+                $(".area-volumeSet").addClass("muted");
+            } else {
+                $(".area-volumeSet").removeClass("muted");
+            }
+        },
+        open: function() {
+            if (isActive) {
+                delay.clear("volume");
+                $("#volume_set>div").stop(true, true).addClass("is-open");
+            }
+        },
+        close: function() {
+            $("#volume_set>div").stop(true, true).removeClass("is-open");
+        },
+        up: function(arg) {
+            setMuted(false);
+            volume.open();
+            dmmplayer.volume = Math.min(dmmplayer.volume + arg / 100, 1.0);
+        },
+        down: function(arg) {
+            setMuted(false);
+            volume.open();
+            dmmplayer.volume = Math.max(0.0, dmmplayer.volume - arg / 100);
+        },
+        toggleMute: function(actionBy) {
+            setMuted(!dmmplayer.muted);
+            volume.refresh();
+            sendPlayerLog(dmmplayer.muted ? "mute_enable" : "mute_disable", actionBy);
+        },
+    };
+
+    // 共通イベント
+    setCommonEvent();
+    // 固有ロジック
+    setServiceLogic();
+}
+
+// イベント初期化
+function init()
+{
+    $(document).off("click", ".btn-player-close");
+
+    // キーバインド
+    $(document).off("keydown");
+    $(document).off("keyup");
+}
+
+// API呼び出し
+function callApi(action, options, callback)
+{
+    var obj = {action: action};
+    if (options) {
+        for (var p in options) {
+            obj[p] = options[p];
+        }
+    }
+
+    $.ajax({
+        url         : API_DOMAIN[args.adult_flag] + API_PATH,
+        cache       : false,
+        timeout     : TIME_SETTINGS.API_TIMEOUT,
+        type        : "POST",
+        contentType : "application/json",
+        data        : JSON.stringify(obj),
+        dataType    : "json",
+        error       : function(jqXHR, textStatus, errorThrown) {
+            error(createErrorCode(ERROR.NETWORK_ERROR.CODE), ERROR.NETWORK_ERROR.MESSAGE + " status code: " + jqXHR.status);
+        },
+        success     : function(data, textStatus, jqXHR) {
+            try {
+                var response = JSON.parse(jqXHR.responseText);
+            } catch(e) {
+                error(createErrorCode(ERROR.PARSE_ERROR.CODE), ERROR.PARSE_ERROR.MESSAGE);
+                return false;
+            }
+
+            // APIで定義されたエラー
+            if (response.code) {
+                error(createErrorCode(response.code), response.message);
+                return false;
+            }
+
+            // リクエストオプションのデータをコールバック先で使いたい場合があるので引数で渡す
+            callback(response, options);
+        }
+    });
+}
+
+// API呼び出し(エラーを無視する)
+function callApiIgnoreError(action, options, callback)
+{
+    var obj = {action: action};
+    if (options) {
+        for (var p in options) {
+            obj[p] = options[p];
+        }
+    }
+
+    $.ajax({
+        url         : API_DOMAIN[options.adult_flag] + API_PATH,
+        cache       : false,
+        timeout     : TIME_SETTINGS.API_TIMEOUT,
+        type        : "POST",
+        contentType : "application/json",
+        data        : JSON.stringify(obj),
+        dataType    : "json",
+        complete    : function(jqXHR, textStatus) {
+            try {
+                var response = JSON.parse(jqXHR.responseText);
+            } catch(e) {
+                // 再生には影響を与えないようにエラーを無視する
+            }
+            callback(response);
+        }
+    });
+}
+
+// プレイヤーパーツの作成
+function createPlayerParts()
+{
+    // シークバー
+    $("#seek").slider({
+        orientation: "horizontal",
+        range : "min",
+        min   : 0,
+        max   : parseInt(dmmplayer.duration, 10),
+        value : dmmplayer.currentTime,
+        slide : function (event, ui) {
+            // 本物の mouse{down|move|up} や touch{start|move|up} からエミュレートされたイベントには
+            // originalEvent プロパティが入っているので、それ以外からのコールバックかどうかチェック
+            // (jQuery UI Touch Punch によって mousedown 前に意図せず slide がトリガーされる)
+            if (!event.originalEvent) {
+                return;
+            }
+            seekTo(ui.value);
+        }
+    });
+    // 音量
+    volume.create();
+    // スライダーにタブ移動禁止
+    $(".ui-slider-handle").attr("tabindex", "-1");
+
+    initThumbnail();
+    initHeatmap();
+    initPlaybackRateMenu();
+}
+
+// ミリ秒を hh:mm:ss に変換する
+function millisecondsToTime(ms)
+{
+    return new Date(ms).toISOString().slice(-13, -5);
+}
+
+// ウィンドウリサイズ
+function resizePlayer(width, height)
+{
+    // ウィンドウ内サイズ
+    var inWidth = window.innerWidth || document.documentElement.clientWidth;
+    var inHeight = window.innerHeight || document.documentElement.clientHeight;
+    // 指定のサイズとウィンドウ内サイズが同じなら、変更しない
+    if (width === inWidth && height === inHeight) {
+        return;
+    }
+
+    // ウィンドウ外枠サイズ
+    var outWidth = window.outerWidth || document.documentElement.offsetWidth;
+    var outHeight= window.outerHeight || document.documentElement.offsetHeight;
+    // ウィンドウ外枠サイズ
+    offsetWidth = outWidth - inWidth;
+    offsetHeight= outHeight- inHeight;
+
+    // サイズ変更
+    window.resizeTo(width + offsetWidth, height + offsetHeight);
+}
+
+// 再生 / 一時停止
+function togglePlayPause(actionBy)
+{
+    if (isActive && dmmplayer) {
+        if (dmmplayer.paused) {
+            dmmplayer.play();
+            // 手動再生で再生回数更新が必要な場合にはAPI呼び出し
+            callPlayCount();
+            sendPlayerLog("play", actionBy)
+        } else {
+            dmmplayer.pause();
+            sendPlayerLog("pause", actionBy)
+        }
+    }
+    fadeOutManualPlay();
+    fadeOutRePlayButton();
+    dmmplayer.autoplay = true;
+}
+
+function seekTo(time){
+    var before = dmmplayer.currentTime;
+
+    if (isActive && !isSeek) {
+        dmmplayer.currentTime = time;
+        hideThumbnailArea();
+
+        if ($("#manual_play").css("display") !== "none") {
+            fadeOutManualPlay();
+        }
+    }
+}
+
+function skip(sec, action, actionBy) {
+    if (!isActive) {
+        return;
+    }
+
+    var before = dmmplayer.currentTime;
+    dmmplayer.currentTime = Math.min(Math.max(0, dmmplayer.currentTime + sec * 1000), dmmplayer.duration);
+    sendPlayerLog(action, actionBy, millisecondsToTime(before), millisecondsToTime(dmmplayer.currentTime));
+}
+
+/**
+ * サムネイル画像取得APIを生成するために話数を設定
+ * 
+ * @param {number} part 1-indexedなパート番号
+ */
+function setThumbnailPart(part)
+{
+    if (thumbnailInfo !== null) {
+        if (!part) {
+            part = 1;
+        }
+        thumbnailInfo["part"] = part;
+    }
+}
+
+// サムネイル画像取得APIを生成するためにcidを設定
+function setThumbnailCid(cid)
+{
+    if (thumbnailInfo !== null) {
+        thumbnailInfo["cid"] = cid;
+    }
+}
+
+// サムネイルの初期化
+function initThumbnail()
+{
+    // timebarの設定(すでにある場合には追加しない)
+    if ($("#timebar").size() === 0) {
+        $('#seek').children('.ui-slider-range').after('<div id="timebar" class="ico-timebar""></div>');
+    }
+    hideThumbnailArea();
+
+    // サムネイルが取得できなかった場合
+    if (thumbnailInfo === null) {
+        return;
+    }
+
+    // サムネイルurlをajaxで取得
+    $.ajax({
+        url      : getThumbnailApiUrl(),
+        type     : "GET",
+        dataType : "JSON",
+    }).done(function(data) {
+        thumbnailInfo["number"] = Number(data["number"]); // 画像枚数
+        thumbnailInfo["frame"]  = Number(data["concat"]); // １枚あたりのフレーム数
+        thumbnailInfo["span"]   = Number(data["span"]);   // １フレームの秒数
+        thumbnailInfo["width"]  = Number(data["width"]);  // １フレームのサイズ（横）
+        thumbnailInfo["height"] = Number(data["height"]); // １フレームのサイズ（縦）
+        thumbnailInfo["url"]    = data["uri"];            // サムネイル画像URI
+        setThumbnail();
+    }).fail(function(data) {
+        thumbnailInfo = null;
+        // サムネイルがない場合の時間表示のレイアウト調整
+        $("#seektime").css("position", "relative");
+    });
+}
+
+// サムネイル用DOM生成
+function setThumbnail()
+{
+    // すでに存在している場合にはデタッチする
+    $("#thumb_base").detach();
+    if (thumbnailInfo !== null) {
+        // パネルに要素を差し込む
+        $("#seek").append('<div id="thumb_base" style="display: none"></div>');
+
+        // サムネイル画像プリロード
+        var $thumbBase = $("#thumb_base");
+        imgCnt = 0;
+
+        for (var cnt = 0; cnt < thumbnailInfo["url"].length && $thumbBase[0]; cnt++) {
+            var img = new Image();
+            img.onload = function () {
+                imgCnt++;
+                // 全サムネイル画像のロードが完了したか
+                if (imgCnt === thumbnailInfo["number"]) {
+                    // オブジェクト解放
+                    $thumbBase = null;
+                }
+            };
+            img.onerror = function () {
+                // サムネ画像読み込みに失敗した場合、サムネイル要素を破棄
+                thumbnailInfo = null;
+                $thumbBase.empty();
+            };
+
+            // 画像読み込み
+            img.src = thumbnailInfo["url"][cnt];
+            $("#thumb_base").append( '<img id="thumb_img_' + cnt + '" src="' + img.src + '" />' );
+        }
+    }
+}
+
+// サムネイル画像取得APIの生成
+function getThumbnailApiUrl()
+{
+    var domain;
+    // サムネイル画像URI取得APIのURLを指定する
+    domain = "https://prd.api.thap.dmm.com/v2/thumbnail/content/";
+    return domain + thumbnailInfo["cid"] + "?type=" + thumbnailInfo["size"] + "&part=" + thumbnailInfo["part"];
+}
+
+// サムネイル表示
+function showThumbnail(margin)
+{
+    if (thumbnailInfo === null || imgCnt !== thumbnailInfo['number']) {
+        return;
+    }
+
+    thumbnailInfo["margin"] = margin;
+
+    // Canvas定義
+    var expand   = getThumbnailExpand();
+    canvasWidth  = thumbnailInfo["width"]  * expand;
+    canvasHeight = thumbnailInfo["height"] * expand;
+
+    // 初期化
+    $("#thumbnailFramePos").empty();
+
+    // サムネイル用のCanvas作成
+    $("#thumbnailFramePos").prepend('<canvas id="thumbnailFrame" width="' + canvasWidth + '" height="' + canvasHeight + '"></canvas></div>');
+    $("#thumbnailFramePos").width(canvasWidth);
+    $("#thumbnailFramePos").height(canvasHeight);
+
+    drawThumbnailCanvas("#thumbnailFrame");
+}
+
+// サムネイル表示（canvas）
+function drawThumbnailCanvas(domId)
+{
+    var count = getThumbnailCount();
+
+    // ファイル番号
+    var fileNo  = Math.floor(count / thumbnailInfo["frame"]);
+    // フレーム番号
+    var frameNo = Math.floor(count % thumbnailInfo["frame"]);
+
+    // 切り出し位置
+    var rect = {
+        "x": thumbnailInfo["width"] * frameNo,
+        "y": 0,
+        "w": thumbnailInfo["width"]  - 1,
+        "h": thumbnailInfo["height"] - 1
+    };
+
+    // 書き出し位置
+    var draw = {
+        "x": 0,
+        "y": 0,
+        "w": canvasWidth  - 1,
+        "h": canvasHeight - 1
+    };
+
+    // canvas
+    var ctx = $(domId)[0].getContext("2d");
+    var img = $("#thumb_img_" + fileNo)[0];
+    // 描写
+    if (img !== undefined) {
+        // 塗りつぶし
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, thumbnailInfo["width"] - 1, thumbnailInfo["height"] - 1);
+        ctx.drawImage(img, rect["x"], rect["y"], rect["w"], rect["h"], draw["x"], draw["y"], draw["w"], draw["h"]);
+    }
+    // オブジェクト解放
+    img = null;
+    ctx = null;
+}
+
+// サムネイルエリア表示
+function showThumbnailArea()
+{
+    $("#thumbnail").show();
+    if (!isSeek) {
+        $("#timebar").show();
+    } else {
+        $("#timebar").hide();
+    }
+}
+
+// サムネイルエリア非表示
+function hideThumbnailArea()
+{
+    $("#thumbnail").hide();
+    $("#timebar").hide();
+}
+
+// サムネイル拡大倍率を算出
+function getThumbnailExpand()
+{
+    if (isFullScreen()) {
+        return thumbnailInfo["expand"];
+    } else {
+        return 1;
+    }
+}
+
+// 動的に変化するプレイヤーパーツの位置設定
+function setPlayerPartsPosition(domId, margin)
+{
+    margin = margin - $(domId).innerWidth()/2;
+    if (margin < 0) {
+        margin = 0;
+    } else if (margin > $("#seek").width() - $(domId).innerWidth()) {
+        margin = $("#seek").width() - $(domId).innerWidth();
+    }
+    $(domId).css("margin-left", margin);
+}
+
+// 表示するサムネイルの番号を算出
+function getThumbnailCount()
+{
+    return Math.floor(getThumbnailTime() / thumbnailInfo["span"]);
+}
+
+// 表示するサムネイルの時間を算出
+function getThumbnailTime()
+{
+    return Math.max(1, Math.floor(thumbnailInfo["margin"] / $("#seek").innerWidth() * dmmplayer.duration / 1000));
+}
+
+// ヒートマップ初期化
+function initHeatmap()
+{
+    if (isHeatmapInitialized) return;
+
+    var isHeatmapEnable = getCookie(COOKIE_NAME.HEATMAP);
+
+    setHeatmapPoints().done(function() {
+        if (typeof isHeatmapEnable === "undefined") {
+            setCookie(COOKIE_NAME.HEATMAP, 1, cookieDomainPreg, "/", 365, "");
+        }
+        if (isHeatmapEnable == 0) {
+            hideHeatmap();
+            sendHeatmapLog(false);
+        } else {
+            showHeatmap();
+            sendHeatmapLog(true);
+        }
+    })
+    .fail(function () {
+        $("#heatmap-toggle-menu").remove();
+    })
+    .always(function() {
+        isHeatmapInitialized = true;
+    });
+}
+
+// pigeonでヒートマップのログを送る	
+function sendHeatmapLog(enable)	
+{	
+    var mode = enable ? "enable" : "disable";	
+    var sid = dmmvideo.getStreamIdFromStreamUrl(currentQuality.url);	
+    var openId = getCookie("i3_opnd");	
+
+    if (sid && openId) {	
+        var obj = {sid: sid, open_id: openId, url: location.href};	
+        $.ajax({	
+            url         : pigeonHost + "/v2/dig_player_heatmap/" + mode + "/heatmap",	
+            cache       : false,	
+            timeout     : TIME_SETTINGS.API_TIMEOUT,	
+            type        : "POST",	
+            contentType : "application/json",	
+            data        : JSON.stringify(obj),	
+            dataType    : "json",	
+        }).fail(function(xhr, textStatus, errorThrown) {	
+            debug("Failed to send heatmap log to pigeon: " + xhr.status);	
+        });	
+    }	
+}
+
+// ヒートマップを表示しているかどうか
+function isHeatmapActive()
+{
+    var polygon = document.getElementById("heatmap_polygon");
+    return polygon !== null && isHeatmapInitialized && polygon.style.display !== "none";
+}
+
+// ヒートマップのpolygonのpointsをセットする
+function setHeatmapPoints()
+{
+    var deferred = new $.Deferred();
+    $.ajax({
+        url         :  heatmapApiEndpoint,
+        data        : {
+            content_id: cid,
+            part_number: dmmplayer.part
+        },
+        headers     : {
+            "X-Authorization-Token": HEATMAP_API_TOKEN
+        },
+        cache       : false,
+        timeout     : TIME_SETTINGS.API_TIMEOUT,
+        type        : "GET",
+        dataType    : "json",
+    }).done(function(data, textStatus, xhr) {
+        if (xhr.status === 204) {
+            debug("No heatmap data");
+            deferred.reject();
+            return;
+        }
+
+        if (data.length !== data.timestamps.length || data.length !== data.values.length) {
+            debug("Validation of heatmap data failed");
+            deferred.reject();
+            return;
+        }
+
+        var polygon = document.getElementById("heatmap_polygon");
+        if (polygon === null) {
+            deferred.reject();
+            return;
+        }
+
+        var points = normalizeHeatmapPoints(data.timestamps, data.values);
+        polygon.setAttribute("points", points);
+        deferred.resolve();
+    }).fail(function(xhr, textStatus, errorThrown) {
+        debug("Failed to get heatmap data: " + xhr.status);
+        deferred.reject();
+    }).always(function() {
+        heatmapPart = dmmplayer.part;
+    });
+
+    return deferred.promise();
+}
+
+// ヒートマップのデータを正規化し、polygonのpoints形式にする
+function normalizeHeatmapPoints(timestamps, values)
+{
+    // 尺を超えたtimestampを持つデータは弾く
+    var originalLength = timestamps.length;
+    timestamps = timestamps.filter(function(e) {return e <= Math.round(dmmplayer.duration / 1000)});
+    var diffLength = originalLength - timestamps.length;
+    if (diffLength > 0) {
+        values = values.slice(0, -diffLength);
+    }
+
+    var x = timestamps.map(function(e) {return e / Math.max.apply(null, timestamps) * 1000});
+    var y = values.map(function(e) {return 100 - (e / Math.max.apply(null, values) * 100)});
+
+    // グラフ端の調整
+    x.push(1000, 0);
+    y.push(100, 100);
+
+    var p = x.map(function(e, i) {return e + "," + y[i]});
+    var points = p.join(" ");
+    return points;
+}
+
+// ヒートマップを表示する
+function showHeatmap()
+{
+    $("#heatmap_polygon").stop(true, true).fadeIn();
+    $("#heatmap_off").hide();
+    $("#heatmap_on").show();
+    $("#heatmap-toggle-menu").attr("aria-checked", "true");
+}
+
+// ヒートマップを非表示にする
+function hideHeatmap()
+{
+    $("#heatmap_polygon").stop(true, true).fadeOut();
+    $("#heatmap_on").hide();
+    $("#heatmap_off").show();
+    $("#heatmap-toggle-menu").attr("aria-checked", "false");
+}
+
+function initPlaybackRateMenu() {
+    if (document.querySelector("#playback-rate-menu-expanded .submenu") !== null) {
+        return;
+    }
+
+    var panelMenu = document.createElement("div"); 
+    panelMenu.classList.add("submenu");
+    panelMenu.setAttribute("role", "menu");
+
+    PLAYBACK_RATES.forEach(function(e) {
+        var menuItem = document.createElement("div");
+        menuItem.setAttribute("role", "menuitemradio");
+        menuItem.setAttribute("tabindex", "0");
+
+        var label = document.createElement("div");
+        label.classList.add("menuitem-label");
+        if (e == DEFAULT_PLAYBACK_RATE) {
+            label.textContent = DEFAULT_PLAYBACK_RATE_NAME;
+            document.querySelector("#playback-rate-menu .menuitem-content").textContent = DEFAULT_PLAYBACK_RATE_NAME;
+            menuItem.setAttribute("aria-checked", "true");
+        } else {
+            label.textContent = e;
+            menuItem.setAttribute("aria-checked", "false");
+        }
+        label.dataset.playbackRate = e;
+
+        menuItem.appendChild(label);
+        panelMenu.appendChild(menuItem);
+    });
+
+    var expandedMenu = document.getElementById("playback-rate-menu-expanded");
+    expandedMenu.appendChild(panelMenu);
+}
+
+function addQualityBadgeOnSettingsIcon(quality) {
+    var icon = document.querySelector("#settings-menu-icon")
+    icon.classList.remove("quality-badge-4k", "quality-badge-hd");
+
+    if (quality.quality_group === "4k") {
+        icon.classList.add("quality-badge-4k");
+    } else if (quality.quality_group === "hd") {
+        icon.classList.add("quality-badge-hd");
+    }
+}
+
+function addResolutionNameToABRMenu(resolutionName) {
+    if (!isABR())
+        return;
+    var menuitemContent = document.querySelector("#quality-menu .menuitem-content");
+    menuitemContent.textContent = currentQuality.quality_name + " (" + resolutionName + ")";
+}
+
+function isABR() {
+    return currentQuality.quality_order === 0;
+}
+
+// 全画面表示イベント
+function handleFullscreenEvent() {
+    var fullscreenOn = document.getElementById("fullscreen_on");
+    var fullscreenOff = document.getElementById("fullscreen_off");
+
+    if (isFullScreen()) {
+        fullscreenOn.style.display = "none";
+        fullscreenOff.style.display = "inline";
+    } else {
+        fullscreenOn.style.display = "inline";
+        fullscreenOff.style.display = "none";
+    }
+}
+
+function isFullScreen()
+{
+    return document.webkitFullscreenElement
+        || document.msFullscreenElement
+        || document.fullscreenElement;
+}
+
+function toggleFullscreen(actionBy) {
+    if (isFullScreen()) {
+        exitFullscreen();
+        sendPlayerLog("fullscreen_disable", actionBy);
+    } else {
+        requestFullscreen();
+        sendPlayerLog("fullscreen_enable", actionBy);
+    }
+}
+
+// 全画面表示
+function requestFullscreen()
+{
+    if (isActive) {
+        var container = document.getElementById("container");
+
+        if (container.webkitRequestFullscreen) {
+            container.webkitRequestFullscreen();
+        } else if (container.requestFullscreen) {
+            container.requestFullscreen();
+        } else if (container.mozRequestFullScreen) {
+            container.mozRequestFullScreen();
+        } else if (container.msRequestFullscreen) {
+            container.msRequestFullscreen();
+        } else {
+            return;
+        }
+    }
+}
+
+//全画面表示解除
+function exitFullscreen()
+{
+    if (document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+    } else if (document.cancelFullScreen) {
+        document.cancelFullScreen();
+    } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+    }
+}
+
+// パネル表示
+function openPanel(force)
+{
+    if ((isActive && !isUnresponsive) || force) {
+        delay.clear("panel");
+        $(".panel").stop(true, true).fadeIn("fast");
+        $("#container").stop(true, true).css("cursor", "");
+    }
+}
+
+// パネル非表示
+function closePanel()
+{
+    if (dmmplayer && !dmmplayer.paused) {
+        $(".panel").stop(true, true).fadeOut();
+        $("#container").stop(true, true).css("cursor", "none");
+        volume.close();
+
+        if (!isMouseLeaveClosePanel) {
+            // 閉じた直後は開かない
+            isUnresponsive = true;
+            delay.set("immediately", function() {isUnresponsive = false;}, TIME_SETTINGS.UNRESPONSIVE);
+        }
+    }
+}
+
+// パネル自動非表示
+function autoClosePanel()
+{
+    if (!$(".popup-menu").is(":visible")) {
+        delay.set("panel", "closePanel()", TIME_SETTINGS.CLOSE_PANEL);
+    }
+}
+
+// ローディング表示開始
+function loading()
+{
+    // 手動再生の再生開始前は別のビデオ読み込み中ローディングがあるのでこのローディングは表示しない
+    if (autoPlay) {
+        $("#video_loading").stop(true, true).fadeIn();
+        $(".modal-overlay").stop(true, true).fadeIn();
+        isSeek = false;
+        hideThumbnailArea();
+    }
+}
+
+// ローディング表示停止
+function loaded()
+{
+    $("#video_loading").stop(true, true).fadeOut();
+    $(".modal-overlay").stop(true, true).fadeOut();
+    $("#player").show();
+    autoClosePanel();
+}
+
+// 手動再生エリア表示
+function fadeInManualPlay()
+{
+    $("#manual_play").stop(true, true).fadeIn();
+}
+
+// 手動再生エリア非表示
+function fadeOutManualPlay()
+{
+    $("#manual_play").stop(true, true).fadeOut();
+}
+
+// 手動再生ローディング表示
+function fadeInManualPlayLoading()
+{
+    $("#manual_play .dgm-btn-playerCover--loading").stop(true, true).fadeIn();
+}
+
+// 手動再生ローディング非表示
+function fadeOutManualPlayLoading()
+{
+    $("#manual_play .dgm-btn-playerCover--loading").stop(true, true).fadeOut();
+}
+
+// 手動再生ボタン表示
+function fadeInManualPlayButton()
+{
+    $("#manual_play .dgm-btn-playerCover--play").stop(true, true).fadeIn();
+}
+
+// 手動再生ボタン非表示
+function fadeOutManualPlayButton()
+{
+    $("#manual_play .dgm-btn-playerCover--play").stop(true, true).fadeOut();
+}
+
+// リプレイボタン表示
+function fadeInReplayButton()
+{
+    $("#replay").stop(true, true).fadeIn();
+}
+
+// リプレイボタン非表示
+function fadeOutRePlayButton()
+{
+    $("#replay").stop(true, true).fadeOut();
+}
+
+// エラーウィンドウの表示
+function error(code, message)
+{
+    loaded();
+    openPanel(true);
+    isActive = false;
+    if (dmmplayer) {
+        dmmplayer.pause();
+    }
+
+    code    = code    || createErrorCode(ERROR.UNEXPECTED.CODE);
+    message = message || ERROR.UNEXPECTED.MESSAGE;
+
+    debug(code, message, true);
+
+    $("#video_error .error_code").text(code);
+    $("#video_error .error_message").html(decodeURIComponent(message));
+
+    // 画面の真ん中に表示
+    containerWidth  = $("#container").innerWidth();
+    containerHeight = $("#container").innerHeight();
+    errorWidth  = $("#video_error").outerWidth();
+    errorHeight = $("#video_error").outerHeight();
+
+    offsetLeft = (containerWidth  / 2) - (errorWidth  / 2);
+    offsetTop  = (containerHeight / 2) - (errorHeight / 2);
+
+    $("#video_error").css({top: offsetTop, left: offsetLeft});
+    $("#video_error").stop(true, true).fadeIn();
+    $(".modal-overlay").stop(true, true).fadeIn();
+}
+
+// エラーコード生成
+function createErrorCode(code)
+{
+    var envcode = (new dmmvideo.EnvCode()).getEnvCode();
+    return envcode + "-" + code;
+}
+
+// コアイベント
+function setDmmvideoEvent()
+{
+    // ロード開始
+    dmmplayer.on(dmmvideo.VideoEvent.LOADSTART, function() {
+        debug("dmmvideo.VideoEvent.LOADSTART");
+    });
+    // 再生待機中
+    dmmplayer.on(dmmvideo.VideoEvent.WAITING, function() {
+        debug("dmmvideo.VideoEvent.WAITING");
+        loading();
+    });
+    // メタ情報を取得した
+    dmmplayer.on(dmmvideo.VideoEvent.LOADEDMETADATA, function() {
+        debug("dmmvideo.VideoEvent.LOADEDMETADATA");
+        createPlayerParts();
+        autoClosePanel();
+        setCurrentPlaybackRate();
+        isActive = true;
+            
+        // パート切替時のみヒートマップを更新する
+        if (isHeatmapInitialized && (heatmapPart !== dmmplayer.part)) {
+            setHeatmapPoints();
+        }
+    });
+    // 再生準備完了
+    dmmplayer.on(dmmvideo.VideoEvent.CANPLAY, function() {
+        debug("dmmvideo.VideoEvent.CANPLAY");
+        loaded();
+        // 手動再生を行う場合
+        if (!autoPlay) {
+            setManualPlay();
+        } else {
+            $("#miss_autoplay").show();
+        }
+        updateControllerStatus();
+    });
+    // 再生時間更新
+    dmmplayer.on(dmmvideo.VideoEvent.TIMEUPDATE, function() {
+        updateControllerStatus();
+    });
+    // 再生開始・バッファリングから再生中に戻った時
+    dmmplayer.on(dmmvideo.VideoEvent.PLAYING, function() {
+        debug("dmmvideo.VideoEvent.PLAYING");
+        loaded();
+        updateControllerStatus();
+    });
+    dmmplayer.on(dmmvideo.VideoEvent.SEEKED, function() {
+        debug("dmmvideo.VideoEvent.SEEKED");
+        loaded();
+        updateControllerStatus();
+    });
+    // 一時停止
+    dmmplayer.on(dmmvideo.VideoEvent.PAUSE, function() {
+        debug("dmmvideo.VideoEvent.PAUSE");
+        updateControllerStatus();
+    });
+    // シーク中
+    dmmplayer.on(dmmvideo.VideoEvent.SEEKING, function() {
+        updateControllerStatus();
+    });
+    // 音量変更
+    dmmplayer.on(dmmvideo.VideoEvent.VOLUMECHANGE, function() {
+        updateControllerStatus();
+        // PLAY_VOLUMEの更新
+        setCookie(COOKIE_NAME.VOLUME, dmmplayer.volume, cookieDomainPreg, "/", 365, "");
+        debug("play_volume : SET", dmmplayer.volume);
+    });
+    // Bitrate変化(Safari以外)
+    dmmplayer.on(dmmvideo.VideoEvent.BITRATECHANGE, function() {
+        debug("dmmvideo.VideoEvent.BITRATECHANGE " + dmmplayer.bitrate);
+
+        // TODO: ビットレート表記なくなったら消す
+        if (isABR() && isBitrateBased) {
+            var qualityOrder = dmmplayer.bitrates.indexOf(dmmplayer.bitrate) + 1;
+            var quality = playableQualities.find(function(e) { return e.quality_order === qualityOrder });
+            if (quality === undefined)
+                return;
+
+            addQualityBadgeOnSettingsIcon(quality);
+            addResolutionNameToABRMenu(quality.quality_name);
+        }
+    });
+    // 解像度変化(全ブラウザ共通)
+    dmmplayer.on(dmmvideo.VideoEvent.RESOLUTIONCHANGE, function() {
+        // ビットレート形式の場合はBITRATECHANGEイベントで処理
+        if (isABR() && !isBitrateBased) {
+            // WORKAROUND: SARが1:1ではないものはブラウザでエンコード時の解像度が取得できず、画質表記と一致しなくなってしまう
+            // 現在把握しているものについては4の倍数に丸めればよい
+            // ex) 404p: 720x405 => 720x404
+            var resolution = Math.round(Math.min(dmmplayer.videoWidth, dmmplayer.videoHeight) / 4) * 4 + "p";
+
+            // fpsを含む(720p60など)場合があるので画質表記から再取得する
+            var resolutionName;
+            var regex = new RegExp("\\((" + resolution + "\\d*)\\)")
+            for (i = 0; i < playableQualities.length; i++) {
+                var match = regex.exec(playableQualities[i].quality_name);
+                if (match) {
+                    resolutionName = match[1];
+                    break;
+                }
+            }
+            addResolutionNameToABRMenu(resolutionName);
+
+            // 同解像度で複数画質が存在することがあるが、SD/HD/4K区分をまたいで存在することはないのでバッジ用ならこれでOK
+            var quality = playableQualities.find(function(e) { return e.quality_name.includes(resolutionName) });
+            if (quality === undefined)
+                return;
+            addQualityBadgeOnSettingsIcon(quality);
+        }
+    });
+    // エラー
+    dmmplayer.on(dmmvideo.VideoEvent.ERROR, function(data) {
+        debug("dmmvideo.VideoEvent.ERROR");
+        // 動画の読み込み中にエラーが発生
+        videoError(data);
+    });
+    // 動画の再生が末尾に達した
+    dmmplayer.on(dmmvideo.VideoEvent.ENDED, function() {
+        debug("dmmvideo.VideoEvent.ENDED");
+        $("#player").hide();
+        openPanel(true);
+        updateControllerStatus();
+
+        videoEnded();
+    });
+    // 同時視聴を検出して再生をブロックした
+    if (dmmvideo.VideoEvent.SIMULWATCHBLOCKED) {
+        dmmplayer.on(dmmvideo.VideoEvent.SIMULWATCHBLOCKED, function() {
+            debug("dmmvideo.VideoEvent.SIMULWATCHBLOCKED");
+            $("#video_blocked").stop(true, true).fadeIn();
+            $(".modal-overlay").stop(true, true).fadeIn();
+        });
+        dmmplayer.on(dmmvideo.VideoEvent.PLAY, function() {
+            debug("dmmvideo.VideoEvent.PLAY");
+            $("#video_blocked").stop(true, true).fadeOut();
+            $(".modal-overlay").stop(true, true).fadeOut();
+        });
+    }
+}
+
+// プレイヤー共通イベント
+function setCommonEvent()
+{
+    setFullscreenEvent();
+    setBlockedPopupEvent();
+    setMouseEvent();
+    setErrorPopupEvent();
+    setAutoplayButtonEvent();
+    setSettingsMenuEvents();
+    setPartListEvent();
+    setSeekbarEvent();
+    setKeyboardShortcut();
+    setPlayerCoverEvent();
+}
+
+function setFullscreenEvent() {
+    $("#fullscreen_set").click(function() {
+        toggleFullscreen(PLAYERLOG_UI_ACTION_BY.BUTTON);
+    });
+    $("#player").dblclick(function() {
+        toggleFullscreen(PLAYERLOG_UI_ACTION_BY.BUTTON);
+    });
+    document.addEventListener("webkitfullscreenchange", handleFullscreenEvent, false);
+    document.addEventListener("mozfullscreenchange",    handleFullscreenEvent, false);
+    document.addEventListener("MSFullscreenChange",     handleFullscreenEvent, false);
+    document.addEventListener("fullscreenchange",       handleFullscreenEvent, false);
+}
+
+function setBlockedPopupEvent() {
+    $("#video_blocked button").click(function(e) {
+        e.preventDefault();
+        switch (this.className) {
+        case "close":
+            window.close();
+            break;
+        case "resume":
+            dmmplayer.play();
+            break;
+        }
+    });
+}
+
+function setMouseEvent() {
+    $("#container").on({
+        mousemove: function(event) {
+            // 前回のマウス位置と比較して動いていればパネル表示
+            if (mouseClientX !== event.clientX || mouseClientY !== event.clientY) {
+                openPanel();
+                autoClosePanel();
+            }
+            // マウス位置を保存
+            mouseClientX = event.clientX;
+            mouseClientY = event.clientY;
+        },
+        mouseleave: function() {
+            if (isMouseLeaveClosePanel) {
+                // マウスが離れた場合にパネルを即時消す設定があれば閉じる
+                closePanel();
+            }
+        },
+        // 右クリック制御
+        contextmenu: function() {
+            return false;
+        },
+    });
+}
+
+function setErrorPopupEvent() {
+    $("#video_error").hide();
+    $(document).on("click", ".btn-player-close", function() {
+        window.close();
+    });
+}
+
+function setAutoplayButtonEvent() {
+    // 自動再生失敗時に表示させる再生ボタンのイベント
+    $("#miss_autoplay .btn-player-play").click(function() {
+        dmmplayer.play();
+        $("#miss_autoplay").hide();
+    });
+}
+
+function setSettingsMenuEvents() {
+    // アイコン
+    $("#settings-menu-icon").on("click keydown", function(e) {
+        if (typeof e.keyCode === "undefined" || e.keyCode === KEY_CODE.ENTER) {
+            if ($(".settings-menu").is(":visible")) {
+                hideSettingsMenu();
+            } else {
+                $(".settings-menu").stop(true, true).fadeIn(TIME_SETTINGS.SETTING_MENU_FADE);
+            }
+        }
+        if (e.keyCode === KEY_CODE.ENTER) {
+            $(".settings-menu").children("[role^=menuitem]").first().focus();
+        }
+    });
+
+    // メニュー外クリック
+    $(document).on("click", function(e) {
+        if ($(e.target).closest(".settings-menu, #settings-menu-icon").length === 0 && $(".settings-menu").is(":visible")) {
+            hideSettingsMenu();
+        }
+    });
+
+    // 戻るボタン(タイトル)
+    $(".expanded-menu .panel-title").on("click keydown", function(e) {
+        if (typeof e.keyCode === "undefined" || e.keyCode === KEY_CODE.ENTER) {
+            $(".settings-menu").find(".expanded-menu").hide();
+            $(".settings-menu").find(":not(.expanded-menu)").show();
+            $(".settings-menu").find("[aria-owns=" + $(this.parentElement).attr("id") + "]").attr("aria-expanded", "false");
+        }
+        if (e.keyCode === KEY_CODE.ENTER) {
+            var expandedMenuId = $(this).closest(".expanded-menu").attr("id");
+            $(".settings-menu").find("div[aria-owns=" + expandedMenuId + "]").focus();
+        }
+    });
+
+    // ヒートマップトグル
+    $("#heatmap-toggle-menu").on("click keydown", function(e) {
+        if (typeof e.keyCode === "undefined" || e.keyCode === KEY_CODE.ENTER) {
+            if (isHeatmapActive()) {
+                hideHeatmap();
+                setCookie(COOKIE_NAME.HEATMAP, 0, cookieDomainPreg, "/", 365, "");
+                sendPlayerLog("rating_graph_disable", PLAYERLOG_UI_ACTION_BY.BUTTON);
+            } else {
+                showHeatmap();
+                setCookie(COOKIE_NAME.HEATMAP, 1, cookieDomainPreg, "/", 365, "");
+                sendPlayerLog("rating_graph_enable", PLAYERLOG_UI_ACTION_BY.BUTTON);
+            }
+        }
+    });
+ 
+    // 詳細メニュー展開
+    $(".settings-menu div[aria-haspopup='true']").on("click keydown", function(e) {
+        if (typeof e.keyCode === "undefined" || e.keyCode === KEY_CODE.ENTER) {
+            $(".settings-menu").children().hide();
+            $("#" + $(this).attr("aria-owns")).show();
+            $(this).attr("aria-expanded", "true")
+        }
+        if (e.keyCode === KEY_CODE.ENTER) {
+            $("#" + $(this).attr("aria-owns")).find("[aria-checked='true']").focus();
+        }
+    });
+
+    // 詳細メニュー選択
+    $(document).on("click keydown", ".expanded-menu div[role='menuitemradio']", function(e) {
+        if (typeof e.keyCode === "undefined" || e.keyCode === KEY_CODE.ENTER) {
+            switch ($(this).closest(".expanded-menu").attr("id")) {
+                case "playback-rate-menu-expanded":
+                    var video = document.getElementsByTagName("video")[0];
+                    var before = video.playbackRate;
+                    video.playbackRate = $(this).find(".menuitem-label").data("playbackRate");
+                    sendPlayerLog("speed_change", PLAYERLOG_UI_ACTION_BY.BUTTON, before, video.playbackRate);
+                    break;
+                case "quality-menu-expanded":
+                    switchQuality(parseInt(this.firstElementChild.dataset.qualityOrder));
+                    break;
+            }
+
+            var label = $(this).children(".menuitem-label").text();
+            var expandedMenuId = $(this).closest(".expanded-menu").attr("id");
+            $(".settings-menu").find("div[aria-owns=" + expandedMenuId + "]").children(".menuitem-content").text(label);
+            $(this).siblings().attr("aria-checked", "false");
+            $(this).attr("aria-checked", "true");
+        }
+    });
+}
+
+function setPartListEvent() {
+    // アイコン
+    $("#part-list-icon").on("click keydown", function(e) {
+        if (typeof e.keyCode === "undefined" || e.keyCode === KEY_CODE.ENTER) {
+            if ($(".part-list-menu").is(":visible")) {
+                $(".part-list-menu").stop(true, true).fadeOut(TIME_SETTINGS.SETTING_MENU_FADE);
+            } else {
+                $(".part-list-menu").stop(true, true).fadeIn(TIME_SETTINGS.SETTING_MENU_FADE);
+            }
+        }
+        if (e.keyCode === KEY_CODE.ENTER) {
+            $(".part-list-menu").children("[role^=menuitem]").first().focus();
+        }
+    });
+
+    // メニュー外クリック
+    $(document).on("click", function(e) {
+        if ($(e.target).closest(".part-list-menu, #part-list-icon").length === 0 && $(".part-list-menu").is(":visible")) {
+            $(".part-list-menu").stop(true, true).fadeOut(TIME_SETTINGS.SETTING_MENU_FADE);
+        }
+    });
+
+    // パート選択
+    $(document).on("click keydown", ".part-list-menu div[role='menuitemradio']", function(e) {
+        if (typeof e.keyCode === "undefined" || e.keyCode === KEY_CODE.ENTER) {
+            var before = currentPart;
+            loadPart($(this).find(".menuitem-label").data("part"));
+            sendPlayerLog("skip_part", PLAYERLOG_UI_ACTION_BY.BUTTON, before, currentPart);
+        }
+    });
+}
+
+function setSeekbarEvent() {
+    // シークバー上の表示
+    $("#thumbnail").append('<div id="thumbnailFramePos"></div>');
+    $("#thumbnail").append('<div id="seektime" class="box-seektime" style="font-size: 12px">00:00:00</div>');
+    hideThumbnailArea();
+
+    $(".seekable").on({
+        mousemove: function(event) {
+            setSeekingThumbnail(event.pageX);
+        },
+        mouseenter: function() {
+            if (isActive) {
+                showThumbnailArea();
+            }
+        },
+        mouseleave: function() {
+            if (!isSeek) {
+                hideThumbnailArea();
+            }
+        },
+        mousedown: function() {
+            isSeek = true;
+            showThumbnailArea();
+        }
+    });
+    $("#thumbnail").on({
+        mouseenter: function() {
+            if (!isSeek) {
+                hideThumbnailArea();
+            }
+        }
+    });
+
+    // 画面上のどこで操作されてもイベントを発火させる
+    document.onmousemove = function(event) {
+        if (isSeek) {
+            setSeekingThumbnail(event.pageX);
+        }
+    };
+    document.onmouseup = function(event) {
+        if (isSeek) {
+            isSeek = false;
+            var margin = getSeekingPosition(event.pageX);
+            seekTo(getSeekingTime(margin));
+        }
+    };
+    document.onmouseenter = function() {
+        if (!isSeek) {
+            hideThumbnailArea();
+        }
+    };
+    function setSeekingThumbnail(pageX) {
+        var margin      = getSeekingPosition(pageX);
+        var tooltipText = millisecondsToTime(getSeekingTime(margin));
+        $("#seektime").text(tooltipText);
+        showThumbnail(margin);
+        setPlayerPartsPosition("#thumbnail", margin);
+        setPlayerPartsPosition("#timebar", margin);
+    };
+    function getSeekingPosition(pageX) {
+        var offset = $("#seek").offset().left;
+        var margin = pageX - offset;
+        if (margin > $("#seek").width() - 1) {
+            margin = $("#seek").width() - 1;
+        }
+        return margin;
+    };
+    // シーク中の時間を算出
+    function getSeekingTime(margin) {
+        return Math.max(1, Math.ceil(margin / $("#seek").width() * dmmplayer.duration));
+    };
+}
+
+function setKeyboardShortcut() {
+    $(document).on({
+        keydown: function(e) {
+            // 同時視聴エラー表示中はキー操作無効
+            if ($('#video_blocked').is(':visible')) {
+                return true;
+            }
+
+            // キーボードイベントが制限されている場合
+            var focused = true;
+            if (isLimitKeybord) {
+                // 対象キーボードイベント判定
+                if (!isTargetKeyCode(e)) {
+                    // 対象のキーボードイベントではなければ後続のデフォルトキーボードイベント実行
+                    return true;
+                }
+                // プレイヤーにフォーカスがあるか取得
+                focused = isPlayerFocused();
+                if (!focused) {
+                    // フォーカスがなければ後続のデフォルトキーボードイベント実行
+                    return true;
+                }
+                // キー操作にフォーカスがあたっているコンポーネントが反応してしまうのでコンテナにフォーカスを移動しておく
+                setPlayerFocus();
+            }
+
+            openPanel();
+
+            switch (e.keyCode) {
+                case KEY_CODE.LEFT:
+                    if ((e.ctrlKey && !e.metaKey) || (!e.ctrlKey && e.metaKey)) {
+                        // Windows: Ctrl, Mac: command
+                        loadPreviousPart(PLAYERLOG_UI_ACTION_BY.KEYBOARD);
+                    } else if (e.shiftKey) {
+                        skip(-(VIDEO_TIME_SETTINGS.SKIP_LONG), 'rewind_60', PLAYERLOG_UI_ACTION_BY.KEYBOARD);
+                    } else {
+                        skip(-(VIDEO_TIME_SETTINGS.SKIP_SHORT), 'rewind_10', PLAYERLOG_UI_ACTION_BY.KEYBOARD);
+                    }
+                    break;
+                case KEY_CODE.RIGHT:
+                    if ((e.ctrlKey && !e.metaKey) || (!e.ctrlKey && e.metaKey)) {
+                        // Windows: Ctrl, Mac: command
+                        loadNextPart(PLAYERLOG_UI_ACTION_BY.KEYBOARD);
+                    } else if (e.shiftKey) {
+                        skip(VIDEO_TIME_SETTINGS.SKIP_LONG, 'forward_60', PLAYERLOG_UI_ACTION_BY.KEYBOARD);
+                    } else {
+                        skip(VIDEO_TIME_SETTINGS.SKIP_SHORT, 'forward_10', PLAYERLOG_UI_ACTION_BY.KEYBOARD);
+                    }
+                    break;
+                case KEY_CODE.UP:
+                    volume.up(5);
+                    break;
+                case KEY_CODE.DOWN:
+                    volume.down(5);
+                    break;
+            }
+
+            // キーボード制限でフォーカスがプレイヤーにある場合デフォルトキーボードイベントをキャンセル
+            if (isLimitKeybord && focused) {
+                e.preventDefault();
+                return false;
+            }
+        },
+        keyup: function(e) {
+            // 同時視聴エラー表示中はキー操作無効
+            if ($('#video_blocked').is(':visible')) {
+                return true;
+            }
+
+            // キーボードイベントが制限されている場合
+            var focused = true;
+            if (isLimitKeybord) {
+                // 対象キーボードイベント判定
+                if (!isTargetKeyCode(e)) {
+                    // 対象のキーボードイベントではなければ後続のデフォルトキーボードイベント実行
+                    return true;
+                }
+                // プレイヤーにフォーカスがあるか取得
+                focused = isPlayerFocused();
+                if (!focused) {
+                    // フォーカスがなければ後続のデフォルトキーボードイベント実行
+                    return true;
+                }
+                // キー操作にフォーカスがあたっているコンポーネントが反応してしまうのでコンテナにフォーカスを移動しておく
+                setPlayerFocus();
+            }
+
+            autoClosePanel();
+
+            switch (e.keyCode) {
+                case KEY_CODE.SPACE:
+                    togglePlayPause(PLAYERLOG_UI_ACTION_BY.KEYBOARD);
+                    e.preventDefault();
+                    break;
+                case KEY_CODE.ENTER:
+                    if (e.altKey) {
+                        toggleFullscreen(PLAYERLOG_UI_ACTION_BY.KEYBOARD);
+                    }
+                    break;
+                case KEY_CODE.M:
+                    volume.toggleMute(PLAYERLOG_UI_ACTION_BY.KEYBOARD);
+                    break;
+                case KEY_CODE.ESC:
+                    volume.close();
+                    $(".part-list-menu").stop(true, true).fadeOut(TIME_SETTINGS.SETTING_MENU_FADE);
+                    hideSettingsMenu();
+                    break;
+            }
+
+            // キーボード制限でフォーカスがプレイヤーにある場合デフォルトキーボードイベントをキャンセル
+            if (isLimitKeybord && focused) {
+                e.preventDefault();
+                return false;
+            }
+        }
+    });
+}
+
+function setPlayerCoverEvent() {
+    // 手動再生
+    $("#manual_play .dgm-btn-playerCover--play").click(function() {
+        setPlayerFocus();
+        togglePlayPause(PLAYERLOG_UI_ACTION_BY.BUTTON);
+    });
+    // リプレイ再生
+    $("#replay .dgm-btn-playerCover--replay").click(function() {
+        fadeOutRePlayButton();
+        setPlayerFocus();
+        // リストの先頭にある作品を再生
+        loading();
+        loadPart(1);
+    });
+}
+
+function hideSettingsMenu() {
+    $(".settings-menu").stop(true, true).fadeOut(TIME_SETTINGS.SETTING_MENU_FADE, function() {
+        $(".settings-menu").find(".expanded-menu").hide();
+        $(".settings-menu").find(":not(.expanded-menu)").show();
+        $("[aria-expanded]").attr("aria-expanded", "false");
+    });
+}
+
+// デバッグ表示
+function debug(title, data, isTrace)
+{
+    var d = new Date();
+    var now =
+        d.getFullYear() + "/" +
+        d.getMonth()+1  + "/" +
+        d.getDate()     + " " +
+        d.getHours()    + ":" +
+        d.getMinutes()  + ":" +
+        d.getSeconds();
+
+    if (IS_DEBUG) {
+        console.log("[PL][" + now + "] " + title + " ");
+        if (data !== undefined) {
+            console.log(data);
+        }
+        if (isTrace) {
+            console.trace();
+        }
+    }
+}
+
+function sendPlayerLog(action, actionBy, beforeValue, afterValue) {
+    if (!dmmplayer.playerLog) {
+        return;
+    }
+    
+    dmmplayer.playerLog.send(
+        {
+            log_level: "info",
+            event: "ui action",
+            ui_action: action,
+            ui_action_by: actionBy,
+            ui_before_action_value: beforeValue,
+            ui_after_action_value: afterValue
+        }
+    )
+}
+
+
+// クッキーの発行
+function setCookie(name, value, domain, path, expires, secure) {
+    if (!name) return;
+
+    var str = name + "=" + encodeURIComponent(value);
+    if (domain) {
+        str += "; domain=" + domain;
+    }
+    if (path) {
+        str += "; path=" + path;
+    }
+    if (expires) {
+        var nowtime = new Date().getTime();
+        expires = new Date(nowtime + (60 * 60 * 24 * 1000 * expires));
+        expires = expires.toGMTString();
+        str += "; expires=" + expires;
+    }
+    if (secure && location.protocol == "https:") {
+        str += "; secure";
+    }
+
+    document.cookie = str;
+}
+
+// クッキーの取得
+function getCookie(name)
+{
+    var cookies = document.cookie;
+    var cookieItem = cookies.split(";");
+
+    var cookieArray = new Array();
+
+    for (i = 0; i < cookieItem.length; i++) {
+      cookieItem[i] = cookieItem[i].trim();
+      var elem = cookieItem[i].split("=");
+      cookieArray[elem[0]] = decodeURIComponent(elem[1]);
+    }
+    return cookieArray[name];
+}
+
+// プレイヤーフォーカス判定
+function isPlayerFocused()
+{
+    // プレイヤーコンテナにフォーカスがあたっているか確認
+    var fucusElementId = $(':focus').attr('id');
+    if (fucusElementId) {
+        // id名がプレイヤーのcontainer配下にある要素か確認
+        if (fucusElementId === 'container' ||
+            $('#container').find('#' + selectorEscape(fucusElementId)).length > 0) {
+            return true;
+        }
+    }
+
+    // フォーカスが当たっている要素のclass名を取得
+    var focusElementClass = $(':focus').attr('class');
+    if (focusElementClass) {
+        // 前後の空白削除
+        // 連続した空白は一つの空白に変換
+        focusElementClass = focusElementClass.replace(/^\s+|\s+$/g,'').replace(/ +/g,' ');
+
+        // class名をfindする際の形式に変換(複数ある場合には状態などで変わる場合があるので先頭のみで検索)
+        var focusElementClassName = '.' + selectorEscape(focusElementClass.split(' ')[0]);
+
+        // class名がプレイヤーのcontainer配下にある要素か確認
+        if ($('#container').find(focusElementClassName).length > 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// 対象キーコード確認
+function isTargetKeyCode(event)
+{
+    var keyCode = event.keyCode;
+
+    // プレイヤーキーボードイベントに定義されているか確認
+    for(var playerKeyCode in KEY_CODE){
+        // 暫定対応: EnterはAltも伴った場合のみ
+        if (keyCode == KEY_CODE.ENTER && !event.altKey) {
+            return false;
+        }
+
+        if (KEY_CODE[playerKeyCode] === keyCode) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// mute設定保存
+function setMuted(isMuted)
+{
+    if (isMuted) {
+        dmmplayer.muted = true;
+        setCookie(COOKIE_NAME.MUTED, 1, cookieDomainPreg, "/", 365, "");
+    } else {
+        dmmplayer.muted = false;
+        setCookie(COOKIE_NAME.MUTED, 0, cookieDomainPreg, "/", 365, "");
+    }
+}
+
+// プレイヤーフォーカス取得
+function setPlayerFocus(){
+    $("#container").focus();
+}
+
+// jQueryセレクタエスケープメソッド
+function selectorEscape(val){
+    return val.replace(/[ !"#$%&'()*+,.\/:;<=>?@\[\\\]^`{|}~]/g, '\\$&');
+}
+// サービス固有ロジック
+function setServiceLogic()
+{
+    if (isPlayerResize) {
+        resizePlayer(660, 490);
+    }
+
+    if (!$.inArray(args.act, API_ACTION)) {
+        return false;
+    }
+
+    // ガイドサンプル
+    if (API_ACTION.GUIDE_SAMPLE == args.act) {
+        $("#header .title").text("SAMPLE");
+        removePartListElements();
+
+        callApi(
+            API_ACTION.GUIDE_SAMPLE,
+            args,
+            callbackPlayInfo
+        );
+        return;
+    }
+
+    // PlayListAPI(プレイリスト)
+    callApi(
+        args.act,
+        args,
+        function(res) {
+            playableParts = res.list.item;
+            // 月額はパート指定で再生を開始できない(args.partなし)
+            currentPart = parseInt(args.part || 1);
+
+            if (playableParts.length === 1) {
+                removePartListElements();
+            } else {
+                initPartListMenu();
+            }
+
+            loadPart(currentPart);
+
+            // 手動再生の場合パッケージ画像などを表示
+            if (!autoPlay) {
+                setManualPlayLoading();
+            }
+        }
+    );
+}
+
+function setCurrentPlaybackRate() {
+    var rate = parseFloat($("#playback-rate-menu-expanded div[role='menuitemradio'][aria-checked='true']").find(".menuitem-label").data("playbackRate"));
+    if (isNaN(rate))
+        return;
+
+    var video = document.querySelector('#container video');
+    video.playbackRate = rate;
+}
+
+function switchQuality(qualityOrder) {
+    var quality = playableQualities.find(function(e) { return e.quality_order === qualityOrder });
+    if (quality === undefined)
+        return;
+
+    var options = {
+        keepPosition: true,
+        part: dmmplayer.part
+    };
+    dmmplayer.load(quality.url, options);
+    currentQuality = quality;
+    addQualityBadgeOnSettingsIcon(currentQuality);
+
+    // 手動再生前の場合があるのでパッケージ画像を非表示に変更
+    fadeOutManualPlay();
+    dmmplayer.autoplay = true;
+
+    volume.reload();
+}
+
+/**
+ * 指定したパートのファイルを読み込む
+ * 
+ * @param {number} part 1-indexedなパート番号
+ */
+function loadPart(part)
+{
+    if (!playableParts || part < 1)
+        return false;
+
+    loading();
+
+    currentPart = part;
+    setThumbnailPart(part);
+
+    var partObj = playableParts[part - 1];
+    $("#header .title").text(decodeURIComponent(partObj.name));
+
+    // パートリストのactivate
+    var partElement = $(".part-list-menu div[role='menuitemradio']")[part - 1];
+    if (partElement) {
+        $(partElement).siblings().attr("aria-checked", "false");
+        $(partElement).attr("aria-checked", "true");
+    }
+    // パート移動ボタンのactivate
+    var previousPart = document.getElementById("move_previous_part");
+    var nextPart = document.getElementById("move_next_part");
+    if (previousPart)
+        previousPart.disabled = !hasPreviousPart(part);
+    if (nextPart)
+        nextPart.disabled = !hasNextPart(part)
+
+    // 手動再生前の場合があるのでパッケージ画像を非表示に変更
+    fadeOutManualPlay();
+
+    // PlayInfoAPI(再生URL)
+    var params = {
+        service           : args.service,
+        format            : args.format,
+        mail              : args.mail,
+        codec             : args.ctype,
+        index             : partObj.index,
+        shop_name         : partObj.shop_name,
+        product_id        : partObj.product_id,
+        part              : partObj.part,
+        media             : partObj.media,
+        category          : partObj.category,
+        parent_product_id : partObj.parent_product_id
+    };
+    callApi(
+        API_ACTION.PLAY_INFO,
+        params,
+        callbackPlayInfo
+    );
+}
+
+function hasPreviousPart(part) {
+    return part - 2 in playableParts;
+}
+
+function hasNextPart(part) {
+    return part in playableParts;
+}
+
+function loadPreviousPart(actionBy) {
+    if (hasPreviousPart(currentPart)) {
+        var before = currentPart;
+        loadPart(currentPart - 1);
+        sendPlayerLog("part_move_prev", actionBy, before, before - 1);
+    }
+}
+
+function loadNextPart(actionBy) {
+    if (hasNextPart(currentPart)) {
+        var before = currentPart;
+        loadPart(currentPart + 1);
+        sendPlayerLog("part_move_next", actionBy, before, before + 1);
+    }
+}
+
+// PlayInfo Callback関数
+function callbackPlayInfo(data, params)
+{
+    playableQualities = data.list.item;
+
+    instanceType = DMMVIDEO_INSTANCE_TYPE.HLS;
+    var hlsjs = {
+        // デフォルト値の 600sec だと低ビットレートで DoS 判定を受けやすいので制限
+        // 高ビットレートに合わせて 60MB (maxBufferSize) ÷ 6000kbps = 100sec
+        maxMaxBufferLength: 100
+    };
+    if (/\/manifest[\w]*\.mpd/.test(playableQualities[0].url)) {
+        instanceType = DMMVIDEO_INSTANCE_TYPE.DASH;
+    }
+
+    var dmmvideoParams = { env: env, type: instanceType, id: "video", autoplay: autoPlay, hlsjs: hlsjs };
+    if (keySystems !== undefined)
+        dmmvideoParams.keySystems = keySystems;
+    dmmplayer = dmmvideo.DMMVideoFactory.getInstance(dmmvideoParams);
+
+    setDmmvideoEvent();
+    volume.initial();
+    dmmplayer.autoplay = autoPlay;
+
+    isBitrateBased = playableQualities.every(function(e) {
+        return $.isNumeric(e.quality_name);
+    });
+    if (isBitrateBased)
+        convertBitrateBasedQualities();
+
+    playableQualities.sort(function(a, b) {
+        return (a.quality_order < b.quality_order) ? 1 : -1;
+    });
+
+    var defaultQuality = playableQualities.find(function(e) { return e.default_quality }) || playableQualities[0];
+    if (currentQuality === undefined) {
+        currentQuality = defaultQuality;
+    } else {
+        var quality = playableQualities.find(function(e) { return e.quality_name === currentQuality.quality_name });
+        // パート移動後に元の画質がなければデフォルトにフォールバック
+        currentQuality = quality || defaultQuality;
+    }
+
+    initQualityMenu();
+    addQualityBadgeOnSettingsIcon(currentQuality);
+
+    function loadSource(url) {
+        var options = {
+            keepPosition: false,
+            part: params.part
+        };
+        dmmplayer.load(url, options);
+        volume.reload();
+
+        // サムネイル画像取得のAPI作成のためにcidを設定
+        setThumbnailCid(data.list.cid);
+        cid = data.list.cid;
+    }
+
+    loadSource(currentQuality.url);
+     dmmplayer._hls.on("hlsFragDecrypted", function(_, data) {
+      console.log(data)
+      const filename = data.frag.relurl
+      const buf = data.data
+      injectDecryptedData(filename, buf, buf.byteLength)
+    }, dmmplayer._hls)
+}
+
+// 旧ビットレート表記のquality name/order/groupを補完する
+// TODO: ビットレート表記なくなったら消す
+function convertBitrateBasedQualities() {
+    playableQualities.sort(function(a, b) {
+        return (parseInt(a.quality_name) < parseInt(b.quality_name)) ? 1 : -1;
+    })
+
+    playableQualities.forEach(function(e, i) {
+        e.quality_order = playableQualities.length - i - 1;
+
+        if (e.quality_name === "0") {
+            e.quality_group = null;
+            e.quality_name = "Auto";
+            e.default_quality = true;
+            return;
+        }
+
+        if (e.quality_name === "4000" || e.quality_name === "6000") {
+            e.quality_group = "hd";
+        } else {
+            e.quality_group = "sd";
+        }
+
+        e.quality_name += "kbps";
+        e.default_quality = false;
+    });
+}
+
+function removePartListElements() {
+    $(".part-list-menu, #part-list-icon, #move_previous_part, #move_next_part").remove();
+}
+
+function initPartListMenu() {
+    var partList = document.querySelector(".part-list-menu");
+    for (var i = 1; i < playableParts.length + 1; i++) {
+        var part = document.createElement("div");
+        part.setAttribute("role", "menuitemradio");
+        part.setAttribute("tabindex", "0");
+
+        var label = document.createElement("div");
+        label.classList.add("menuitem-label");
+        label.textContent = "Part " + i;
+        label.dataset.part = i;
+
+        part.appendChild(label);
+        partList.appendChild(part);
+    }
+}
+
+function initQualityMenu() {
+    var menu = document.querySelector("#quality-menu-expanded");
+    if (menu.querySelector(".submenu")) {
+        menu.removeChild(menu.querySelector(".submenu"));
+    }
+
+    var panelMenu = document.createElement("div"); 
+    panelMenu.classList.add("submenu");
+    panelMenu.setAttribute("role", "menu");
+
+    for (var i = 0; i < playableQualities.length; i++) {
+        var menuItem = document.createElement("div");
+        menuItem.setAttribute("role", "menuitemradio");
+        menuItem.setAttribute("tabindex", "0");
+
+        var label = document.createElement("div");
+        label.classList.add("menuitem-label");
+        label.textContent = playableQualities[i].quality_name;
+        label.dataset.qualityOrder = playableQualities[i].quality_order;
+
+        if (playableQualities[i].quality_name === currentQuality.quality_name) {
+            document.querySelector("#quality-menu .menuitem-content").textContent = label.textContent;
+            menuItem.setAttribute("aria-checked", "true");
+        } else {
+            menuItem.setAttribute("aria-checked", "false");
+        }
+
+        menuItem.appendChild(label);
+        panelMenu.appendChild(menuItem);
+    }
+
+    var expandedMenu = document.getElementById("quality-menu-expanded");
+    expandedMenu.appendChild(panelMenu);
+}
+
+// Video終了時イベント
+function videoEnded()
+{
+    if (hasNextPart(currentPart)) {
+        loadPart(currentPart + 1)
+    } else {
+        exitFullscreen();
+
+        if (replay)
+            fadeInReplayButton();
+    }
+}
+
+//エラーイベント
+function videoError(data)
+{
+    // エラーを画面に表示させる
+    error(data.code, data.message);
+}
+
+// 手動再生ローディング
+function setManualPlayLoading()
+{
+    // 再生リストの先頭の商品を取得
+    var part = playableParts[0];
+
+    // ローディング中アイコンとパッケージ画像を表示
+    loaded();
+    fadeOutManualPlay();
+    fadeInManualPlayLoading();
+    fadeInManualPlay();
+
+    // パッケージ画像差し込み
+    var package = part.package_image;
+    if (package) {
+        $("#manual_play .dgm-bx-playerCoverPic").children("img").attr({
+            "src": decodeURIComponent(package),
+            "alt": decodeURIComponent(part.name)
+        });
+    } else {
+        // パッケージ画像がない場合にはタイトル設定
+        $("#manual_play .dgm-bx-playerCoverPic").hide();
+        $("#manual_play .dgm-inner-playerCoverTx").children("p").text(decodeURIComponent(part.name));
+    }
+}
+
+// 手動再生
+function setManualPlay()
+{
+    if (!dmmvideo.version || parseFloat(dmmvideo.version) < 1.3) {
+        // 古いバージョンの dmmvideo.js がキャッシュに残っていた場合 autoplay が効かないので
+        // 明示的にdmmplayerを一時停止
+        dmmplayer.pause();
+        dmmplayer.autoplay = false;
+    }
+
+    // ローディング中ボタンから再生ボタンへ切り替え
+    fadeOutManualPlayLoading();
+    fadeInManualPlayButton();
+
+    // コントロールパネル表示
+    openPanel();
+
+    // 手動再生は最初の一度だけなので自動再生設定に変更
+    autoPlay = true;
+}
+
+// 再生回数更新API実行
+function callPlayCount()
+{
+    // 月額動画などの手動再生の場合で、再生開始後に更新処理が必要な場合にはAPI呼び出し
+    if (isPlayCountService && !isPlayCounted) {
+        var params = {
+            service           : args.service,
+            format            : args.format,
+            mail              : args.mail,
+            shop_name         : args.shop_name,
+            product_id        : args.product_id,
+            category          : args.category,
+            parent_product_id : args.parent_product_id,
+            adult_flag        : args.adult_flag
+        };
+
+        callApiIgnoreError(
+            API_ACTION.PLAY_COUNT,
+            params,
+            callbackPlayCount
+        );
+    }
+}
+
+// 再生回数更新APIのcallback関数
+function callbackPlayCount(data)
+{
+    // 再生回数更新済みとしてフラグを設定
+    isPlayCounted = true;
+}
+
+// コントローラ表示更新
+function updateControllerStatus()
+{
+    // フォーカス取得設定の場合にはプレイヤーにフォーカスを取得する
+    if (isFocus) {
+        setPlayerFocus();
+    }
+
+    var playpause = document.getElementById("playpause");
+    var playButton = document.getElementById("play");
+    var pauseButton = document.getElementById("pause");
+
+    if (isActive) {
+        if (!isSeek) {
+            $("#seek").slider("value", dmmplayer.currentTime);
+        }
+        $("#current_time").text(millisecondsToTime(dmmplayer.currentTime));
+        if (isFinite(dmmplayer.duration)) {
+            // ビットレート変更時等、durationが確定していないタイミングだとNaNになるので、数値として有効な場合のみdurationを設定
+            $("#duration").text(millisecondsToTime(dmmplayer.duration));
+        }
+
+        if (dmmplayer.paused) {
+            playButton.style.display = "inline";
+            pauseButton.style.display = "none";
+        } else {
+            playButton.style.display = "none";
+            pauseButton.style.display = "inline";
+        }
+        volume.refresh();
+
+        playpause.disabled = false;
+    } else {
+        $("#current_time").text(millisecondsToTime(0));
+        $("#duration").text(millisecondsToTime(0));
+
+        playpause.disabled = true;
+    }
+}
+
+main();
+</script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRBR-2f7be5ca0c79f4f0fb9","applicationID":"909829694","transactionName":"ZFJaZURVDxVQBUZZWF0YeVJCXQ4IHgJbV15HVlQeRlgAH1QUHVlZV1JA","queueTime":0,"applicationTime":145,"atts":"SBVZEwxPHBs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
